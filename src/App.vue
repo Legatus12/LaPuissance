@@ -4,12 +4,14 @@
 
 <script>
   import Home from './components/Home.vue';
-  import Season from './components/Season.vue';
   import Team from './components/Team.vue';
+  import Shop from './components/Shop.vue';
+  import Season from './components/Season.vue';
+  import News from './components/News.vue';
 
   export default {
     name: "App",
-    components: {Home, Season, Team},
+    components: {Home, Team, Shop, Season, News},
     data(){
       return{
         rendered: Home,

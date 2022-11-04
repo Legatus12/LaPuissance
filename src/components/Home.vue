@@ -9,7 +9,7 @@
                 <p>Conoce a la plantilla.</p>
             </div>
 
-            <div id="g2" class="g">
+            <div id="g2" class="g" @click="render('Shop')">
                 <h1>Tienda</h1>
                 <p>Échale un ojo a nuestras equipaciones.</p>
             </div>
@@ -19,7 +19,7 @@
                 <p>Clasificación, estadísticas y más.</p>
             </div>
 
-            <div id="g4" class="g">
+            <div id="g4" class="g" @click="render('News')">
                 <h1>Noticias</h1>
                 <div>
                     <p>Última noticia- 4/11/22</p>
@@ -57,7 +57,7 @@
 }
 
 #image{
-    background-image: url("../assets/img/_MCD7342.jpg");
+    background-image: url("../assets/img/_MCD7206.jpg");
     background-position: center;
     background-size: cover;
 }

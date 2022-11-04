@@ -1,10 +1,18 @@
 <template>
-    <div id="team" @click="goHome">
-        
+    <div id="team" class="screen">
+        <div>
+            <br><br>
+            <button @click="goHome" id="go-home">&lt;</button>
+            <br><br>
+            <h1>Equipo</h1>
+        </div>
+        <div>
+
+        </div>
     </div>
 </template>
 
-<script>
+<script lang="ts">
     export default {
         emits: ["listenRender"],
         methods:{

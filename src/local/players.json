@@ -1,0 +1,106 @@
+{
+    "1":{
+        "n": 1,
+        "nickname": "DAVID",
+        "name": "",
+        "2223":{
+            "gp": 2, "g": 0, "a": 2, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "4":{
+        "n": 4,
+        "nickname": "GODOY",
+        "name": "Mario Martín",
+        "2223":{
+            "gp": 3, "g": 8, "a": 4, "rd": 0, "yc": 0, "mvp": 2, "py": 0
+        }
+    },
+    "5":{
+        "n": 5,
+        "nickname": "'PAPI MAIK'",
+        "name": "",
+        "2223":{
+            "gp": 3, "g": 1, "a": 0, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "6":{
+        "n": 6,
+        "nickname": "ARTURO",
+        "name": "",
+        "2223":{
+            "gp": 3, "g": 0, "a": 1, "rd": 0, "yc": 0, "mvp": 1, "py": 0
+        }
+    },
+    "9":{
+        "n": 9,
+        "nickname": "'EL PILLO'",
+        "name": "",
+        "2223":{
+            "gp": 0, "g": 0, "a": 0, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "10":{
+        "n": 10,
+        "nickname": "ALEXANDER",
+        "name": "Fredy Lemos",
+        "2223":{
+            "gp": 1, "g": 2, "a": 0, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "11":{
+        "n": 11,
+        "nickname": "HUGO",
+        "name": "",
+        "2223":{
+            "gp": 3, "g": 1, "a": 0, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "12":{
+        "n": 12,
+        "nickname": "SANTOS",
+        "name": "Pablo Lantigua",
+        "2223":{
+            "gp": 3, "g": 0, "a": 1, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "14":{
+        "n": 14,
+        "nickname": "BARBU",
+        "name": "Cristian Andrei",
+        "2223":{
+            "gp": 3, "g": 2, "a": 0, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "19":{
+        "n": 19,
+        "nickname": "LUISMO",
+        "name": "",
+        "2223":{
+            "gp": 3, "g": 4, "a": 1, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "69":{
+        "n": 69,
+        "nickname": "CHARLI",
+        "name": "",
+        "2223":{
+            "gp": 3, "g": 0, "a": 0, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "77":{
+        "n": 77,
+        "nickname": "OFKIR",
+        "name": "Mohamed",
+        "2223":{
+            "gp": 0, "g": 0, "a": 0, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    },
+    "99":{
+        "n": 99,
+        "nickname": "CABALLERO",
+        "name": "Francisco",
+        "2223":{
+            "gp": 0, "g": 0, "a": 0, "rd": 0, "yc": 0, "mvp": 0, "py": 0
+        }
+    }
+}

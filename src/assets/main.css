@@ -34,7 +34,7 @@ body{
   text-decoration: underline;
 }
 
-#go-home{
+.go{
   width: 64px;
   height: 64px;
   font-size: 32px;
@@ -45,7 +45,7 @@ body{
   transition: 250ms;
 }
 
-#go-home:hover{
+.go:hover{
   cursor: pointer;
   background-color: #f6f6f6;
   color: #232323;

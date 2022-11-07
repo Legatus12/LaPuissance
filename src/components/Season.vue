@@ -2,7 +2,7 @@
     <div id="season" class="screen">
         <div>
             <br><br>
-            <button @click="goHome" id="go-home">&lt;</button>
+            <button @click="goHome" class="go">&lt;</button>
             <br><br>
             <h1>Temporada 22/23</h1>
         </div>

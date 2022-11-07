@@ -2,18 +2,24 @@ import json from '../local/teams.json';
 
 const array = Object.values(json);
 
-/*
-function compare( a, b ) {
-  if ( a.last_nom < b.last_nom ){
+
+function sortTeams(a, b) {
+  if ( a.points > b.points ){
     return -1;
   }
-  if ( a.last_nom > b.last_nom ){
+  if ( a.points < b.points ){
     return 1;
   }
-  return 0;
+  else{
+    if ( a.dif > b.dif ){
+      return -1;
+    }
+    if ( a.dif < b.dif ){
+      return 1;
+    }
+    else
+      return 0;
+  }
 }
 
-objs.sort( compare );
-*/
-
-export default array.sort((a,b) => (a.points < b.points) ? 1 : ((a.points > b.points) ? -1 : 0));
+export default array.sort(sortTeams);

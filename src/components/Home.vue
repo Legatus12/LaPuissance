@@ -6,7 +6,7 @@
         <div id="grid">
             <div id="g1" class="g" @click="render('Team')">
                 <h1>Equipo</h1>
-                <p>Conoce a la plantilla.</p>
+                <p>Plantilla y estadísticas individuales.</p>
             </div>
 
             <div id="g2" class="g" @click="render('Shop')">
@@ -16,7 +16,7 @@
 
             <div id="g3" class="g" @click="render('Season')">
                 <h1>Temporada <br> 22/23</h1>
-                <p>Clasificación, estadísticas y más.</p>
+                <p>Partidos y clasificación.</p>
             </div>
 
             <div id="g4" class="g" @click="render('News')">

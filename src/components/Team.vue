@@ -7,44 +7,39 @@
             <h1>Equipo</h1>
         </div>
         <div id="players">
-            <h1 class="position">Porteros</h1>
-            <div>
-                <div class="player" @click="renderPlayer(99)">99 - CABALLERO</div>
-            </div>
-            <h1 class="position">Defensas</h1>
-            <div>
-                <div class="player" @click="renderPlayer(5)">5 - PAPI MAIK</div>
-                <div class="player" @click="renderPlayer(12)">12 - SANTOS <span>(C)</span></div>
-                <div class="player" @click="renderPlayer(14)">14 - BARBU</div>
-                <div class="player" @click="renderPlayer(19)">69 - CHARLI</div>
-                <div class="player" @click="renderPlayer(77)">77 - OFKIR</div>
-            </div>
-            <h1 class="position">Mediocentros</h1>
-            <div>
-                <div class="player" @click="renderPlayer(4)">4 - GODOY</div>
-                <div class="player" @click="renderPlayer(16)">6 - ARTURO</div>
-                <div class="player" @click="renderPlayer(11)">11 - HUGO</div>
-                <div class="player" @click="renderPlayer(17)">17 - ALEX</div>
-                <div class="player" @click="renderPlayer(19)">19 - LUISMO</div>
-            </div>
-            <h1 class="position">Delanteros</h1>
-            <div>
-                <div class="player" @click="renderPlayer(10)">10 - ALEXANDER</div>
-                <div class="player" @click="renderPlayer(9)">9 - EL PILLO</div>
+            <div v-for="(positions, index) in squad">
+                <h1 class="position">{{ posTitles[index] }}</h1>
+                <div>
+                    <div class="player" v-for="player in positions" @click="renderPlayer(player)">
+                        {{ player.n }} - {{ player.nickname }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
+    import array from '../local/players.json';
+    let players = Object.values(array);
+
     export default {
         emits: ["listenRender", "playerRequest"],
+        data(){
+            return{
+                squad: [players.filter(x => x.pos == "gk"),
+                        players.filter(x => x.pos == "d"),
+                        players.filter(x => x.pos == "m"),
+                        players.filter(x => x.pos == "s"),],
+                posTitles: ["Porteros", "Defensas", "Mediocentros", "Delanteros"]
+            }
+        },
         methods:{
             goHome(){
                 this.$emit("listenRender", "Home");
             },
-            renderPlayer(n){
-                this.$emit("playerRequest", n);
+            renderPlayer(obj){
+                this.$emit("playerRequest", obj);
             }
         }
     }
@@ -53,8 +48,6 @@
 <style scoped>
 
 #team{
-    width: 100%;
-    height: 100%;
     background-color: #f1121f;
     color: #f6f6f6;
 }
@@ -65,8 +58,9 @@
     justify-content: space-around;
 }
 
-#players > div{
+#players > div > div{
     display: flex;
+    flex-wrap: wrap;
     gap: 32px;
 }
 
@@ -80,7 +74,8 @@
     background-color: #f6f6f6;
     color: #232323;
     padding: 1em;
-    width: fit-content;
+    width: 10em;
+    min-width: 10em;
     font-size: 22px;
     font-weight: bolder;
     transition: 250ms;

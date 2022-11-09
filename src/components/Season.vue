@@ -6,29 +6,46 @@
             <br><br>
             <h1>Temporada 22/23</h1>
         </div>
-        <div>
-            <div id="table">
-                <h2>Clasificación</h2>
-                <table>
-                    <tr id="head">
-                        <th>Equipo</th>
-                        <th>Puntos</th>
-                    </tr>
-                    <tr v-for="team in teams">
-                        <td>{{ team.name }}</td>
-                        <td>{{ team.points }}</td>
-                    </tr>
-                </table>
-            </div>
-            <div>
-
-            </div>
+        <div id="table">
+            <h2>Clasificación</h2>
+            <table>
+                <tr id="head">
+                    <th>Equipo</th>
+                    <th>Puntos</th>
+                </tr>
+                <tr v-for="team in teams">
+                    <td>{{ team[19] }}</td>
+                    <td>{{ Number(team[6]) }}</td>
+                </tr>
+            </table>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-    import sortedTeams from '../store/sortTeams.mjs'
+    import Papa from 'papaparse';
+    import sortTeams from '../store/sortTeams.mjs';
+    import sortMatches from '../store/sortMatches.mjs';
+
+    let sortedTeams;
+    Papa.parse("https://datos.madrid.es/egob/catalogo/211549-1-juegos-deportivos-actual.csv", {
+        download: true,
+        complete: function(result) {
+            //console.log(result.data[0]);
+            sortedTeams = result.data.filter(x => x[16] == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h").sort(sortTeams);
+            //console.log(sortedTeams);
+        }
+    });
+
+    let matches;
+    Papa.parse("https://datos.madrid.es/egob/catalogo/211549-3-juegos-deportivos-actual.csv", {
+        download: true,
+        complete: function(result) {
+            console.log(result.data[0]);
+            matches = result.data.filter(x => x[18] == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && x[22] == "La Puissance" || x[23] == "La Puissance").sort(sortMatches);
+            console.log(matches);
+        }
+    });
 
     export default {
         emits: ["listenRender"],
@@ -79,11 +96,6 @@ tr:nth-child(odd){
 tr:hover{
     text-align: left;
     background-color: #565656;
-}
-
-th:hover{
-    color: #f1121f;
-    cursor: pointer;
 }
 
 td, th{

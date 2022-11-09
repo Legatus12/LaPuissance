@@ -10,20 +10,7 @@
 
             </div>
             <div>
-                <div id="info">
-                    <div>
-                        <h2>{{ player.n }}</h2>
-                    </div>
-                    <div>
-                        <p>{{ player.name }}</p>
-                        <h2>{{ player.nickname }}</h2>
-                    </div>
-                </div>
-                <div id="stats">
-                    <p>PJ = {{ player[2223].gp }} || JP = {{ player[2223].mvp }}</p>
-                    <p>GOLES = {{ player[2223].g }} || ASISTENCIAS = {{ player[2223].a }}</p>
-                    <p>TA = {{ player[2223].yc }} || TR = {{ player[2223].rc }}</p>
-                </div>
+                {{ this.player }}
             </div>
         </div>
     </div>
@@ -31,16 +18,9 @@
 </template>
 
 <script lang="ts">
-    import players from '../local/players.json';
-    let array = Object.values(players);
 
     export default {
         name: "Player",
-        data(){
-            return{
-                player: array.reduce((ac, el) => ac.n == this.current ? ac : el, array[0])
-            }
-        },
         methods:{
             goTeam(){
                 this.$emit("listenRender", "Team");
@@ -50,7 +30,7 @@
             }
         },
         props:{
-            current: Number
+            player: Object
         }
     }
 </script>
@@ -63,4 +43,7 @@
     background-color: #f1121f;
 }
 
+#info{
+    display: flex;
+}
 </style>

@@ -9,7 +9,7 @@
                 <p>Plantilla y estadísticas individuales.</p>
             </div>
 
-            <div id="g2" class="g" @click="render('Shop')">
+            <div id="g2" class="g" @click="test">
                 <h1>Tienda</h1>
                 <p>Échale un ojo a nuestras equipaciones.</p>
             </div>
@@ -19,7 +19,7 @@
                 <p>Partidos y clasificación.</p>
             </div>
 
-            <div id="g4" class="g" @click="render('News')">
+            <div id="g4" class="g" @click="">
                 <h1>Noticias</h1>
                 <div>
                     <p>Última noticia- 4/11/22</p>
@@ -32,11 +32,17 @@
 </template>
 
 <script>
+
     export default {
         emits: ["listenRender"],
         methods:{
             render(c){
                 this.$emit("listenRender", c);
+            },
+            data(){
+                return{
+                    ex: "",
+                }
             }
         }
     }

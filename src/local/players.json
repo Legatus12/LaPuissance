@@ -1,6 +1,7 @@
 {
     "1":{
         "n": 1,
+        "pos": "gk",
         "nickname": "DAVID",
         "name": "",
         "2223":{
@@ -9,6 +10,7 @@
     },
     "4":{
         "n": 4,
+        "pos": "d",
         "nickname": "GODOY",
         "name": "Mario Martín",
         "2223":{
@@ -17,6 +19,7 @@
     },
     "5":{
         "n": 5,
+        "pos": "d",
         "nickname": "'PAPI MAIK'",
         "name": "",
         "2223":{
@@ -25,6 +28,7 @@
     },
     "6":{
         "n": 6,
+        "pos": "m",
         "nickname": "ARTURO",
         "name": "",
         "2223":{
@@ -33,6 +37,7 @@
     },
     "9":{
         "n": 9,
+        "pos": "s",
         "nickname": "'EL PILLO'",
         "name": "",
         "2223":{
@@ -41,6 +46,7 @@
     },
     "10":{
         "n": 10,
+        "pos": "s",
         "nickname": "ALEXANDER",
         "name": "Fredy Lemos",
         "2223":{
@@ -49,6 +55,7 @@
     },
     "11":{
         "n": 11,
+        "pos": "m",
         "nickname": "HUGO",
         "name": "",
         "2223":{
@@ -57,6 +64,7 @@
     },
     "12":{
         "n": 12,
+        "pos": "d",
         "nickname": "SANTOS",
         "name": "Pablo Lantigua",
         "2223":{
@@ -65,6 +73,7 @@
     },
     "14":{
         "n": 14,
+        "pos": "d",
         "nickname": "BARBU",
         "name": "Cristian Andrei",
         "2223":{
@@ -73,6 +82,7 @@
     },
     "19":{
         "n": 19,
+        "pos": "m",
         "nickname": "LUISMO",
         "name": "",
         "2223":{
@@ -81,6 +91,7 @@
     },
     "69":{
         "n": 69,
+        "pos": "d",
         "nickname": "CHARLI",
         "name": "",
         "2223":{
@@ -89,6 +100,7 @@
     },
     "77":{
         "n": 77,
+        "pos": "d",
         "nickname": "OFKIR",
         "name": "Mohamed",
         "2223":{
@@ -97,6 +109,7 @@
     },
     "99":{
         "n": 99,
+        "pos": "gk",
         "nickname": "CABALLERO",
         "name": "Francisco",
         "2223":{

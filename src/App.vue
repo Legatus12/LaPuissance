@@ -1,11 +1,11 @@
 <template>
-  <component v-bind:is="rendered" @listenRender="render" @playerRequest="renderPlayer" :current=player />
+  <component v-bind:is="renderedComponent" @listenRender="renderComponent" @playerRequest="renderPlayer" :player=renderedPlayer />
 </template>
 
 <script>
   import Home from './components/Home.vue';
   import Team from './components/Team.vue';
-    import Player from './components/Player.vue';
+  import Player from './components/Player.vue';
   import Shop from './components/Shop.vue';
   import Season from './components/Season.vue';
   import News from './components/News.vue';
@@ -15,17 +15,17 @@
     components: {Home, Team, Shop, Season, News, Player},
     data(){
       return{
-        rendered: Home,
-        player: 0,
+        renderedComponent: Home,
+        renderedPlayer: null,
       }
     },
     methods:{
-      render(c){
-        this.rendered = c;
+      renderComponent(c){
+        this.renderedComponent = c;
       },
-      renderPlayer(n){
-        this.player = n;
-        this.rendered = "Player"
+      renderPlayer(obj){
+        this.renderedPlayer = obj;
+        this.renderedComponent = "Player"
       }
     }
   }

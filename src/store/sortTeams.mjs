@@ -1,20 +1,15 @@
-import json from '../local/teams.json';
-
-const array = Object.values(json);
-
-
 function sortTeams(a, b) {
-  if ( a.points > b.points ){
+  if ( Number(a[6]) > Number(b[6]) ){
     return -1;
   }
-  if ( a.points < b.points ){
+  if ( Number(a[6]) < Number(b[6]) ){
     return 1;
   }
   else{
-    if ( a.dif > b.dif ){
+    if ( Number(a[11]) - Number(a[12]) > Number(b[11]) - Number(b[12]) ){
       return -1;
     }
-    if ( a.dif < b.dif ){
+    if ( Number(a[11]) - Number(a[12]) < Number(b[11]) - Number(b[12]) ){
       return 1;
     }
     else
@@ -22,4 +17,4 @@ function sortTeams(a, b) {
   }
 }
 
-export default array.sort(sortTeams);
+export default sortTeams;

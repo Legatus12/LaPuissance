@@ -1,30 +1,30 @@
 <template>
-    <div id="home">
+    <div class="w-full h-full flex flex-col lg:flex-row md:flex-row">
         
-        <div id="image"></div>
+        <div class="basis-1/2 w-full h-1/2 md:h-full bg-showcase bg-cover bg-center flex flex-col p-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#f1121f] bg-[#232323] w-fit p-2">&nbsp;La&nbsp;Puissance&nbsp;</h1>
+            <p class="text-[#f6f6f6] bg-[#232323] w-fit p-1">&nbsp;Asociación deportiva.&nbsp;</p>
+        </div>
 
-        <div id="grid">
-            <div id="g1" class="g" @click="render('Team')">
-                <h1>Equipo</h1>
-                <p>Plantilla y estadísticas individuales.</p>
+        <div class="basis-1/2 w-full h-1/2 md:h-full flex flex-col xl:grid grid-cols-2 grid-rows-2">
+            <div class="cursor-pointer bg-[#f6f6f6] text-[#232323] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="render('Team')">
+                <h1 class="text-5xl font-bold">Equipo</h1>
+                <p class="text-xl hidden md:inline">Plantilla y estadísticas individuales.</p>
             </div>
 
-            <div id="g2" class="g" @click="test">
-                <h1>Tienda</h1>
-                <p>Échale un ojo a nuestras equipaciones.</p>
+            <div class="cursor-pointer bg-[#f1121f] text-[#f6f6f6] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="test">
+                <h1 class="text-5xl font-bold">Tienda</h1>
+                <p class="text-xl hidden md:inline">Échale un ojo a nuestras equipaciones.</p>
             </div>
 
-            <div id="g3" class="g" @click="render('Season')">
-                <h1>Temporada <br> 22/23</h1>
-                <p>Partidos y clasificación.</p>
+            <div class="cursor-pointer bg-[#232323] text-[#f6f6f6] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="render('Season')">
+                <h1 class="text-5xl font-bold">Temporada</h1>
+                <p class="text-xl hidden md:inline">Partidos y clasificación.</p>
             </div>
 
-            <div id="g4" class="g" @click="">
-                <h1>Noticias</h1>
-                <div>
-                    <p>Última noticia- 4/11/22</p>
-                    <b><i>¡Francisco Caballero vuelve al Equipo!</i></b>
-                </div>
+            <div class="cursor-pointer bg-[#888888] text-[#f6f6f6] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="">
+                <h1 class="text-5xl font-bold">Noticias</h1>
+                <p class="text-xl hidden md:inline">Novedades y avisos.</p>
             </div>
         </div>
 
@@ -33,91 +33,16 @@
 
 <script>
 
-    export default {
-        emits: ["listenRender"],
-        methods:{
-            render(c){
-                this.$emit("listenRender", c);
-            },
-            data(){
-                return{
-                    ex: "",
-                }
-            }
+export default {
+    name: "Home",
+    emits: ["listenRender"],
+    methods:{
+        render(c){
+            this.$emit("listenRender", c);
         }
     }
+}
+
 </script>
 
-<style scoped>
-
-#home{
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-#home > div{
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-
-#image{
-    background-image: url("../assets/img/_MCD7206.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-#grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-h1{
-    font-size: 32px;
-    transition: 250ms;
-}
-
-p,i{
-    font-size: 20px;
-}
-
-.g{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10%;
-    overflow: hidden;
-}
-
-.g:hover{
-    cursor: pointer;
-}
-
-.g:hover > h1{
-    transform: translateX(6%);
-    padding-left: 6%;
-    box-shadow: -10px 0 #f6f6f6;
-}
-
-#g4:hover > h1{
-    box-shadow: -10px 0 #232323;
-}
-
-#g1{
-    background-color: #f1121f;
-    color: #f6f6f6;
-}
-
-#g2, #g3{
-    background-color: #232323;
-    color: #f6f6f6;
-}
-
-#g4{
-    background-color: #f6f6f6;
-    color: #232323;
-}
-
-</style>
+<style scoped></style>

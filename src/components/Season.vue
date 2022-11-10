@@ -27,6 +27,8 @@
     import sortTeams from '../store/sortTeams.mjs';
     import sortMatches from '../store/sortMatches.mjs';
 
+    const date = new Date();
+
     let sortedTeams;
     Papa.parse("https://datos.madrid.es/egob/catalogo/211549-1-juegos-deportivos-actual.csv", {
         download: true,
@@ -38,12 +40,22 @@
     });
 
     let matches;
+    let nextMatch;
     Papa.parse("https://datos.madrid.es/egob/catalogo/211549-3-juegos-deportivos-actual.csv", {
         download: true,
         complete: function(result) {
+            console.log(date);
             console.log(result.data[0]);
-            matches = result.data.filter(x => x[18] == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && x[22] == "La Puissance" || x[23] == "La Puissance").sort(sortMatches);
+            matches = result.data
+                                .filter(x => x[18] == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && (x[22] == "La Puissance" || x[23] == "La Puissance") && new Date(x[11]) <= date)
+                                .sort(sortMatches);
+
+            nextMatch = result.data
+                                .filter(x => x[18] == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && (x[22] == "La Puissance" || x[23] == "La Puissance"))
+                                .sort(sortMatches)[matches.length];
+                                
             console.log(matches);
+            console.log(nextMatch);
         }
     });
 
@@ -51,7 +63,9 @@
         emits: ["listenRender"],
         data(){
             return{
-                teams: sortedTeams
+                teams: sortedTeams,
+                played: matches,
+                next: nextMatch
             }
         },
         methods:{

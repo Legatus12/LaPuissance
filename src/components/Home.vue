@@ -2,7 +2,7 @@
     <div class="w-full h-full flex flex-col lg:flex-row md:flex-row">
         
         <div class="basis-1/2 w-full h-1/2 md:h-full bg-showcase bg-cover bg-center flex flex-col p-8">
-            <h1 class="text-4xl md:text-5xl font-bold text-[#f1121f] bg-[#232323] w-fit p-2">&nbsp;La&nbsp;Puissance&nbsp;</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-[#f1121f] bg-[#232323] w-fit p-2">La&nbsp;Puissance&nbsp;</h1>
             <p class="text-[#f6f6f6] bg-[#232323] w-fit p-1">&nbsp;Asociación deportiva.&nbsp;</p>
         </div>
 

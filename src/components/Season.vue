@@ -65,10 +65,10 @@
     const date = new Date();
 
     let sortedTeams;
-    Papa.parse("https://datos.madrid.es/egob/catalogo/211549-1-juegos-deportivos-actual.csv", {
-        download: true,
+    Papa.parse('../local/table.csv', {
+        header: true,
         complete: function(result) {
-            console.log(result.data[0]);
+            console.log(result);
             sortedTeams = result.data.filter(x => x[16] == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h").sort(sortTeams);
         }
     });
@@ -79,7 +79,7 @@
         download: true,
         complete: function(result) {
             //console.log(date);
-            console.log(result.data[0]);
+            //console.log(result.data[0]);
             matches = result.data
                                 .filter(x => x[18] == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && (x[22] == "La Puissance" || x[23] == "La Puissance") && new Date(x[11]) <= date)
                                 .sort(sortMatches);
@@ -88,8 +88,8 @@
                                 .filter(x => x[18] == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && (x[22] == "La Puissance" || x[23] == "La Puissance"))
                                 .sort(sortMatches)[matches.length];
                                 
-            console.log(matches);
-            console.log(nextMatch);
+            //console.log(matches);
+            //console.log(nextMatch);
         }
     });
 

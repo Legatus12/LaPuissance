@@ -15,7 +15,7 @@
         
 
         <div class="cursor-pointer basis-1/2 w-full h-1/2 md:h-full flex flex-col xl:grid grid-cols-2 grid-rows-2">
-            <div class="bg-g1 bg-cover bg-center text-[#232323] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="">
+            <div class="bg-g1 bg-cover bg-center text-[#232323] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="render('News')">
                 <h1 class="text-5xl font-bold"></h1>
                 <p class="text-xl hidden md:inline"></p>
             </div>
@@ -25,7 +25,7 @@
                 <p class="text-xl hidden md:inline"></p>
             </div>
 
-            <div class="bg-g3 bg-cover bg-center text-[#f6f6f6] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="">
+            <div class="bg-g3 bg-cover bg-center text-[#f6f6f6] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="render('Team')">
                 <h1 class="text-5xl font-bold"></h1>
                 <p class="text-xl hidden md:inline"></p>
             </div>

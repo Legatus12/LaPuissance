@@ -1,17 +1,21 @@
 <template>
-    <div id="team" class="screen">
-        <div>
-            <br><br>
-            <button @click="goHome" class="go">&lt;</button>
-            <br><br>
-            <h1>Equipo</h1>
+    <div class="w-full h-full flex flex-col">
+        <div class="w-full h-16 bg-[#232323] flex items-center">
+            <button @click="goHome" class="w-16 md:w-32 h-full bg-[#f1121f]">&lt;</button>
         </div>
-        <div id="players">
-            <div v-for="(positions, index) in squad">
-                <h1 class="position">{{ posTitles[index] }}</h1>
-                <div>
-                    <div class="player" v-for="player in positions" @click="renderPlayer(player)">
-                        {{ player.n }} - {{ player.nickname }}
+        <div class="w-full h-full BG-[#f6f6f6] flex flex-col md:flex-row p-16 md:p-32 gap-16 md:gap-32">
+            
+            <div v-for="(group, index) in squad"
+            class="w-full h-full text-[#f6f6f6] flex flex-col gap-4">
+
+                <h1 class="text-[#232323]">{{ this.position[index] }}</h1>
+
+                <div v-for="player in group"
+                class="w-full h-16 bg-[#f1121f] flex gap-4 pl-2">
+                    <div class="text-6xl basis-1/4">{{ player.n }}</div>
+                    <div class="basis-3/4 flex flex-col justify-center items-start">
+                        <p>{{ player.name}}</p>
+                        <h1 class="text-xl"><b>{{ player.nickname }}</b></h1>
                     </div>
                 </div>
             </div>
@@ -31,7 +35,7 @@
                         players.filter(x => x.pos == "d"),
                         players.filter(x => x.pos == "m"),
                         players.filter(x => x.pos == "s"),],
-                posTitles: ["Porteros", "Defensas", "Mediocentros", "Delanteros"]
+                position: ["Porteros", "Defensas", "Mediocentros", "Delanteros"]
             }
         },
         methods:{

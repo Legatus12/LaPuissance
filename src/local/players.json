@@ -5,6 +5,7 @@
         "position": "PORTERO",
         "nickname": "DAVID",
         "name": "",
+        "est": 2022,
         "season":{
             "jdm43":{
                 "gp": 3, "g": 0, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "py": 0
@@ -17,6 +18,7 @@
         "position": "MEDIO",
         "nickname": "GODOY",
         "name": "Mario Martín",
+        "est": 2021,
         "season":{
             "jdm43":{
                 "gp": 4, "g": 9, "a": 4, "rc": 0, "yc": 1, "mvp": 2, "py": 0
@@ -29,6 +31,7 @@
         "position": "DEFENSA",
         "nickname": "'PAPI MAIK'",
         "name": "",
+        "est": 2021,
         "season":{
             "jdm43":{
                 "gp": 4, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 1, "py": 0
@@ -41,6 +44,7 @@
         "position": "MEDIO",
         "nickname": "ARTURO",
         "name": "",
+        "est": 2022,
         "season":{
             "jdm43":{
                 "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 0, "mvp": 1, "py": 0
@@ -53,6 +57,7 @@
         "position": "DELANTERO",
         "nickname": "'EL PILLO'",
         "name": "",
+        "est": 2021,
         "season":{
             "jdm43":{
                 "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
@@ -65,6 +70,7 @@
         "position": "DELANTERO",
         "nickname": "ALEXANDER",
         "name": "Fredy",
+        "est": 2021,
         "season":{
             "jdm43":{
                 "gp": 2, "g": 3, "a": 0, "rc": 0, "yc": 1, "mvp": 0, "py": 0
@@ -77,6 +83,7 @@
         "position": "MEDIO",
         "nickname": "HUGO",
         "name": "",
+        "est": 2021,
         "season":{
             "jdm43":{
                 "gp": 4, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
@@ -89,8 +96,12 @@
         "position": "DEFENSA",
         "nickname": "SANTOS",
         "name": "Pablo Lantigua",
+        "est": 2021,
         "season":{
             "jdm43":{
+                "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 1, "mvp": 0, "py": 0
+            },
+            "jdm44":{
                 "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 1, "mvp": 0, "py": 0
             }
         }
@@ -101,6 +112,7 @@
         "position": "DEFENSA",
         "nickname": "BARBU",
         "name": "Cristian Andrei",
+        "est": 2021,
         "season":{
             "jdm43":{
                 "gp": 4, "g": 2, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
@@ -113,6 +125,7 @@
         "position": "MEDIO",
         "nickname": "ALEX",
         "name": "",
+        "est": 2021,
         "season":{
             "jdm43":{
                 "gp": 2, "g": 2, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "py": 0
@@ -125,6 +138,7 @@
         "position": "MEDIO",
         "nickname": "'LUISMO'",
         "name": "",
+        "est": 2021,
         "season":{
             "jdm43":{
                 "gp": 4, "g": 4, "a": 1, "rc": 0, "yc": 0, "mvp": 0, "py": 0
@@ -137,6 +151,7 @@
         "position": "DEFENSA",
         "nickname": "'CHARLI'",
         "name": "",
+        "est": 2022,
         "season":{
             "jdm43":{
                 "gp": 4, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
@@ -149,6 +164,7 @@
         "position": "DEFENSA",
         "nickname": "OFKIR",
         "name": "Mohamed",
+        "est": 2022,
         "season":{
             "jdm43":{
                 "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
@@ -161,6 +177,7 @@
         "position": "PORTERO",
         "nickname": "CABALLERO",
         "name": "Francisco",
+        "est": 2021,
         "season":{
             "jdm43":{
                 "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0

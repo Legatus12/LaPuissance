@@ -1,26 +1,26 @@
 <template>
     <div class="w-full h-full flex flex-col">
 
-        <div class="w-full h-16 bg-[#232323] flex justify-between items-center">
-            <button @click="goHome" class="w-16 md:w-32 h-full bg-[#f1121f] text-5xl text-[#f6f6f6]">
-                <div class="duration-300 md:hover:-translate-x-4">&lt;</div>
+        <div class="w-full h-16 bg-[#232323] flex justify-between items-center border-solid border-b-4 border-[#f6f6f6]">
+            <button @click="goHome" class="w-16 md:w-32 h-full text-5xl text-[#f6f6f6] border-solid border-r-4 border-[#f6f6f6]">
+                <div class="duration-300 md:hover:-translate-x-3">&lt;</div>
             </button>
-            <h1 class="text-[#f6f6f6] text-3xl md:text-4xl px-8">Equipo</h1>
+            <h1 class="text-3xl md:text-4xl font-bold px-8">PLANTILLA</h1>
         </div>
 
-        <div class="w-full h-full bg-[#f6f6f6] flex flex-col p-16 md:p-24 gap-8 overflow-y-scroll">
+        <div class="w-full h-full bg-[#232323] flex flex-col gap-8 p-12 overflow-y-scroll">
 
             <div v-for="(group, index) in squad"
-            class="w-full h-full bg-[#f6f6f6] text-[#f6f6f6] flex flex-col">
+            class="w-full h-full flex flex-col gap-4">
 
-                <h1 class="w-full text-2xl md:text-3xl py-4 text-[#232323]">{{ position[index] }}</h1>
-                <div class="w-full flex flex-col md:flex-row md:flex-wrap gap-4">
+                <h1 class="w-full text-2xl md:text-3xl border-solid border-b-2 border-[#888888]">{{ position[index] }}</h1>
+                <div class="w-full flex flex-col md:flex-row md:flex-wrap gap-4 pb-12">
                     <div v-for="player in group" @click="renderPlayer(player)"
-                    class="w-full md:w-80 h-16 bg-[#f1121f] flex shrink-0 cursor-pointer hover:drop-shadow-2xl duration-300 hover:-translate-y-2">
-                        <div class="text-5xl basis-1/4 text-right p-2">{{ player.n }}</div>
-                        <div class="basis-3/4 flex flex-col justify-end items-start p-2">
+                    class="w-full md:w-80 h-16 bg-[#f6f6f6] flex shrink-0 cursor-pointer hover:drop-shadow-2xl duration-300 hover:-translate-y-2">
+                        <div class="text-5xl basis-1/4 text-[#f1121f] text-right font-black p-2">{{ player.n }}</div>
+                        <div class="basis-3/4 flex flex-col justify-end items-start text-[#232323] p-2">
                             <p>{{ player.name}}</p>
-                            <h1 class="text-xl"><b>{{ player.nickname }}</b></h1>
+                            <h1 class="text-xl font-bold"><b>{{ player.nickname }}</b></h1>
                         </div>
                     </div>
                 </div>

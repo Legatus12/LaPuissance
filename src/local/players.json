@@ -15,7 +15,7 @@
     "4":{
         "n": 4,
         "pos": "m",
-        "position": "MEDIO",
+        "position": "TODOCAMPISTA",
         "nickname": "GODOY",
         "name": "Mario Martín",
         "est": 2021,
@@ -28,7 +28,7 @@
     "5":{
         "n": 5,
         "pos": "d",
-        "position": "DEFENSA",
+        "position": "DEFENSA CENTRAL",
         "nickname": "'PAPI MAIK'",
         "name": "",
         "est": 2021,
@@ -41,7 +41,7 @@
     "6":{
         "n": 6,
         "pos": "m",
-        "position": "MEDIO",
+        "position": "MEDIOCENTRO DEFENSIVO",
         "nickname": "ARTURO",
         "name": "",
         "est": 2022,
@@ -80,7 +80,7 @@
     "11":{
         "n": 11,
         "pos": "m",
-        "position": "MEDIO",
+        "position": "MEDIAPUNTA",
         "nickname": "HUGO",
         "name": "",
         "est": 2021,
@@ -93,7 +93,7 @@
     "12":{
         "n": 12,
         "pos": "d",
-        "position": "DEFENSA",
+        "position": "DEFENSA LATERAL",
         "nickname": "SANTOS",
         "name": "Pablo Lantigua",
         "est": 2021,
@@ -109,7 +109,7 @@
     "14":{
         "n": 14,
         "pos": "d",
-        "position": "DEFENSA",
+        "position": "DEFENSA LATERAL",
         "nickname": "BARBU",
         "name": "Cristian Andrei",
         "est": 2021,
@@ -122,7 +122,7 @@
     "17":{
         "n": 17,
         "pos": "m",
-        "position": "MEDIO",
+        "position": "MEDIAPUNTA",
         "nickname": "ALEX",
         "name": "",
         "est": 2021,
@@ -135,7 +135,7 @@
     "19":{
         "n": 19,
         "pos": "m",
-        "position": "MEDIO",
+        "position": "MEDIOCENTRO",
         "nickname": "'LUISMO'",
         "name": "",
         "est": 2021,
@@ -148,7 +148,7 @@
     "69":{
         "n": 69,
         "pos": "d",
-        "position": "DEFENSA",
+        "position": "DEFENSA LATERAL",
         "nickname": "'CHARLI'",
         "name": "",
         "est": 2022,
@@ -161,7 +161,7 @@
     "77":{
         "n": 77,
         "pos": "d",
-        "position": "DEFENSA",
+        "position": "TODOCAMPISTA",
         "nickname": "OFKIR",
         "name": "Mohamed",
         "est": 2022,

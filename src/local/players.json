@@ -2,127 +2,169 @@
     "1":{
         "n": 1,
         "pos": "gk",
+        "position": "PORTERO",
         "nickname": "DAVID",
         "name": "",
-        "2223":{
-            "gp": 3, "g": 0, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 3, "g": 0, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+            }
         }
     },
     "4":{
         "n": 4,
         "pos": "m",
+        "position": "MEDIO",
         "nickname": "GODOY",
         "name": "Mario Martín",
-        "2223":{
-            "gp": 4, "g": 9, "a": 4, "rc": 0, "yc": 1, "mvp": 2, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 4, "g": 9, "a": 4, "rc": 0, "yc": 1, "mvp": 2, "py": 0
+            }
         }
     },
     "5":{
         "n": 5,
         "pos": "d",
+        "position": "DEFENSA",
         "nickname": "'PAPI MAIK'",
         "name": "",
-        "2223":{
-            "gp": 4, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 1, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 4, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 1, "py": 0
+            }
         }
     },
     "6":{
         "n": 6,
         "pos": "m",
+        "position": "MEDIO",
         "nickname": "ARTURO",
         "name": "",
-        "2223":{
-            "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 0, "mvp": 1, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 0, "mvp": 1, "py": 0
+            }
         }
     },
     "9":{
         "n": 9,
         "pos": "s",
+        "position": "DELANTERO",
         "nickname": "'EL PILLO'",
         "name": "",
-        "2223":{
-            "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+            }
         }
     },
     "10":{
         "n": 10,
         "pos": "s",
+        "position": "DELANTERO",
         "nickname": "ALEXANDER",
         "name": "Fredy",
-        "2223":{
-            "gp": 2, "g": 3, "a": 0, "rc": 0, "yc": 1, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 2, "g": 3, "a": 0, "rc": 0, "yc": 1, "mvp": 0, "py": 0
+            }
         }
     },
     "11":{
         "n": 11,
         "pos": "m",
+        "position": "MEDIO",
         "nickname": "HUGO",
         "name": "",
-        "2223":{
-            "gp": 4, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 4, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+            }
         }
     },
     "12":{
         "n": 12,
         "pos": "d",
+        "position": "DEFENSA",
         "nickname": "SANTOS",
         "name": "Pablo Lantigua",
-        "2223":{
-            "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 1, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 1, "mvp": 0, "py": 0
+            }
         }
     },
     "14":{
         "n": 14,
         "pos": "d",
+        "position": "DEFENSA",
         "nickname": "BARBU",
         "name": "Cristian Andrei",
-        "2223":{
-            "gp": 4, "g": 2, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 4, "g": 2, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+            }
         }
     },
     "17":{
         "n": 17,
         "pos": "m",
+        "position": "MEDIO",
         "nickname": "ALEX",
         "name": "",
-        "2223":{
-            "gp": 2, "g": 2, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 2, "g": 2, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+            }
         }
     },
     "19":{
         "n": 19,
         "pos": "m",
+        "position": "MEDIO",
         "nickname": "LUISMO",
         "name": "",
-        "2223":{
-            "gp": 4, "g": 4, "a": 1, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 4, "g": 4, "a": 1, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+            }
         }
     },
     "69":{
         "n": 69,
         "pos": "d",
+        "position": "DEFENSA",
         "nickname": "CHARLI",
         "name": "",
-        "2223":{
-            "gp": 4, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 4, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+            }
         }
     },
     "77":{
         "n": 77,
         "pos": "d",
+        "position": "DEFENSA",
         "nickname": "OFKIR",
         "name": "Mohamed",
-        "2223":{
-            "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+            }
         }
     },
     "99":{
         "n": 99,
         "pos": "gk",
+        "position": "PORTERO",
         "nickname": "CABALLERO",
         "name": "Francisco",
-        "2223":{
-            "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+        "season":{
+            "jdm43":{
+                "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
+            } 
         }
     }
 }

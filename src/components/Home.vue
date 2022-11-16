@@ -41,10 +41,10 @@
 
 export default {
     name: "Home",
-    emits: ["listenRender"],
+    emits: ["rendering"],
     methods:{
         render(c){
-            this.$emit("listenRender", c);
+            this.$emit("rendering", c);
         }
     }
 }

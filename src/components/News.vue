@@ -12,10 +12,10 @@
 
 <script lang="ts">
     export default {
-        emits: ["listenRender"],
+        emits: ["rendering"],
         methods:{
             goHome(){
-                this.$emit("listenRender", "Home");
+                this.$emit("rendering", "Home");
             }
         }
     }

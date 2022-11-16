@@ -1,5 +1,5 @@
 <template>
-  <component v-bind:is="renderedComponent" @listenRender="renderComponent" @playerRequest="renderPlayer" :player=renderedPlayer />
+  <component v-bind:is="renderedComponent" @rendering="renderComponent" @renderingPlayer="renderPlayer" :player=renderedPlayer />
 </template>
 
 <script>
@@ -20,11 +20,11 @@
       }
     },
     methods:{
-      renderComponent(c){
-        this.renderedComponent = c;
+      renderComponent(component){
+        this.renderedComponent = component;
       },
-      renderPlayer(obj){
-        this.renderedPlayer = obj;
+      renderPlayer(player){
+        this.renderedPlayer = player;
         this.renderedComponent = "Player"
       }
     }

@@ -23,8 +23,8 @@
                 <p class="text-xl hidden md:inline"></p>
             </div>
 
-            <div class="bg-g3 bg-cover bg-center text-[#f6f6f6] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="render('Team')">
-                <h1 class="text-5xl font-bold"></h1>
+            <div class="bg-[#f6f6f6] bg-cover bg-center text-[#232323] p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between" @click="render('Team')">
+                <h1 class="text-5xl font-bold">Equipo</h1>
                 <p class="text-xl hidden md:inline"></p>
             </div>
 

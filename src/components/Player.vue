@@ -7,14 +7,14 @@
             </button>
         </div>
 
-        <div class="w-full h-full flex flex-col px-4 py-12 md:p-32 justify-between">
+        <div class="w-full h-full flex flex-col md:flex-row px-4 py-16 md:p-32 space-around">
             <!--Info-->
-            <div>
+            <div class="basis-1/2">
                 <div>
                     <div class="flex justify-between items-center w-full">
-                        <div class="basis-1/4 flex flex-col p-4">
+                        <div class="basis-1/4 h-32 flex flex-col p-4">
                             <div class="text-7xl text-right">{{ this.player.n }}</div>
-                            <i><p class="text-[#888888]">{{ this.player.position }}</p></i>
+                            <p class="text-[#888888] text-right font-italic">{{ this.player.position }}</p>
                         </div>
                         
                         <div class="w-2 h-32 bg-[#232323]">&nbsp;</div>
@@ -29,16 +29,35 @@
             </div>
             
             <!--Stats-->
-            <div class="w-full">
+            <div class="basis-1/2">
                 <div class="flex justify-between">
-                    <h1 class="underline decoration-[#f1121f] text-2xl">Estadísticas</h1>
+                    <h1 class="underline decoration-[#f1121f] text-3xl">Estadísticas</h1>
                     <select name="" id=""></select>
                 </div>
-                <div class="w-full">
-                    <table>
-                        <tr><td>GOLES: </td><td>{{ this.player.season.jdm43.g }}</td></tr>
-                        <tr><td>ASISTENCIAS: </td><td>{{ this.player.season.jdm43.a }}</td></tr>
-                    </table>
+                <br><br>
+                <div class="w-full grid grid-cols-2 gap-12 text-center">
+
+                        <div class="flex flex-col items-center">
+                            <div class="text-5xl">{{ this.player.season.jdm43.g }}</div><div class="text-xl">GOLES</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div  class="text-5xl">{{ this.player.season.jdm43.a }}</div><div class="text-xl">ASISTENCIAS</div>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="text-5xl">{{ this.player.season.jdm43.gp }}</div><div class="text-xl">PARTIDOS JUGADOS</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="text-5xl">{{ this.player.season.jdm43.mvp }}</div><div class="text-xl">JUGADOR DEL PARTIDO</div>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="text-5xl">{{ this.player.season.jdm43.yc }}</div><div class="text-xl">TARJETAS AMARILLAS</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="text-5xl">{{ this.player.season.jdm43.rc }}</div><div class="text-xl">TARJETAS ROJAS</div>
+                        </div>
+
                 </div>
             </div>
         </div>

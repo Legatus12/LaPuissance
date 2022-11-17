@@ -8,7 +8,7 @@
             <h1 class="text-3xl md:text-4xl font-bold px-8">PLANTILLA</h1>
         </div>
 
-        <div class="w-full h-full bg-[#232323] flex flex-col gap-8 p-12 overflow-y-scroll">
+        <div class="w-full h-full bg-[#232323] flex flex-col gap-6 p-12 overflow-y-scroll">
 
             <div v-for="(group, index) in squad"
             class="w-full h-full flex flex-col gap-4">

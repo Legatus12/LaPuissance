@@ -33,7 +33,7 @@
 
 <script lang="ts">
 
-import array from '../local/players.json';
+import array from '../assets/players.json';
 
 let players = Object.values(array);
 

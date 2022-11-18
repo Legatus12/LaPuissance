@@ -53,7 +53,7 @@
 
     const getData = async () => {
         try {
-            const response = await fetch('src/assets/teams.csv');
+            const response = await fetch('assets/teams.csv');
             const data = await response.text();
             Papa.parse(data, {
                 header: true,
@@ -66,7 +66,7 @@
             console.log(error);
         }
         try {
-            const response = await fetch('src/assets/matches.csv');
+            const response = await fetch('assets/matches.csv');
             const data = await response.text();
             Papa.parse(data, {
                 header: true,
@@ -88,10 +88,6 @@
         }
     }
 
-    const getMatches = async () => {
-        
-    }
-
     getData();
 
     export default {
@@ -109,6 +105,7 @@
             }
         }
     }
+
 </script>
 
 <style></style>

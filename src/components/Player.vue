@@ -1,12 +1,7 @@
 <template>
     <div class="w-full h-full flex flex-col">
 
-        <div class="w-full h-16 bg-[#232323] flex justify-between items-center border-solid border-b-4 border-[#f6f6f6]">
-            <button @click="goTeam" class="w-16 md:w-32 h-full text-5xl text-[#f6f6f6] border-solid border-r-4 border-[#f6f6f6]">
-                <div class="duration-300 md:hover:-translate-x-3">&lt;</div>
-            </button>
-            <h1 class="text-3xl md:text-4xl font-bold px-8">PLANTILLA</h1>
-        </div>
+        <Back @pressed="renderFather"/>
 
         <div class="w-full h-full flex flex-col items-center p-8 md:pt-24 gap-4 md:gap-16 overflow-y-scroll overflow-x-hidden">
 
@@ -31,9 +26,9 @@
             </div>
 
             <div class="w-full">
-                <div class="flex text-xl md:text-2xl">
-                    Estadísticas &nbsp;
-                    <select class="bg-[#232323]">
+                <div class="w-fit text-xl md:text-2xl">
+                    COMPETICIÓN&nbsp;-
+                    <select class="bg-[#232323] cursor-pointer">
                         <option>JDM 43</option>
                     </select>
                 </div>
@@ -74,20 +69,29 @@
 
 <script lang="ts">
 
-    export default {
-        name: "Player",
-        props:{
-            player: Object
+import Back from './Back.vue';
+
+export default {
+    emits: ["rendering"],
+    components: {Back},
+    data(){
+        return{
+            father: "Team"
+        }
+    },
+    props:{
+        player: Object
+    },
+    methods:{
+        renderFather(){
+            this.$emit("rendering", this.father);
         },
-        methods:{
-            goTeam(){
-                this.$emit("rendering", "Team");
-            },
-            show(){
-                console.log(this.player)
-            }
+        show(){
+            console.log(this.player)
         }
     }
+}
+
 </script>
 
 <style></style>

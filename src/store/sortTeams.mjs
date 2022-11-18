@@ -1,15 +1,15 @@
 function sortTeams(a, b) {
-  if ( Number(a[6]) > Number(b[6]) ){
+  if ( Number(a.Puntos) > Number(b.Puntos) ){
     return -1;
   }
-  if ( Number(a[6]) < Number(b[6]) ){
+  if ( Number(a.Puntos) < Number(b.Puntos) ){
     return 1;
   }
   else{
-    if ( Number(a[11]) - Number(a[12]) > Number(b[11]) - Number(b[12]) ){
+    if ( Number(a.Goles_favor) - Number(a.Goles_contra) > Number(b.Goles_favor) - Number(b.Goles_contra) ){
       return -1;
     }
-    if ( Number(a[11]) - Number(a[12]) < Number(b[11]) - Number(b[12]) ){
+    if ( Number(a.Goles_favor) - Number(a.Goles_contra) < Number(b.Goles_favor) - Number(b.Goles_contra) ){
       return 1;
     }
     else

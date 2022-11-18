@@ -1,8 +1,8 @@
 function sortMatches(a, b) {
-    if ( Number(a[4]) > Number(b[4]) ){
+    if ( Number(a.Jornada) > Number(b.Jornada) ){
       return 1;
     }
-    if ( Number(a[4]) < Number(b[4]) ){
+    if ( Number(a.Jornada) < Number(b.Jornada) ){
       return -1;
     }
     else{

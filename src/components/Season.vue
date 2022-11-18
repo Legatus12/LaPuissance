@@ -3,8 +3,9 @@
 
         <Back @pressed="renderFather"/>
 
-        <div class="w-full h-full flex flex-col lg:flex-row items-center text-center p-8 md:p-16 gap-16 md:gap-32 overflow-y-scroll overflow-x-hidden">
-            <div class="w-full h-full flex flex-col gap-4">
+        <div class="w-full h-full flex flex-col lg:flex-row items-center text-center p-8 md:p-16 gap-16 overflow-y-scroll overflow-x-hidden">
+            <!--left-->
+            <div class="w-full h-full flex flex-col md:justify-center gap-6">
                 <div class="w-fit text-lg md:text-xl md:text-2xl">
                     COMPETICIÓN&nbsp;-
                     <select class="bg-[#232323] duration-300 hover:bg-[#888888] cursor-pointer">
@@ -13,11 +14,11 @@
                 </div>
                 <table class="w-full md:text-center">
                     <tr class="bg-[#f6f6f6] md:text-xl text-[#232323]">
-                        <th class="p-1 md:p-2 text-center text-xs md:text-base p-2">pos.</th>
-                        <th class="p-1 md:p-2 text-left">Equipo</th>
-                        <th class="p-1 md:p-2">Pts</th>
-                        <th class="p-1 md:p-2">PJ</th>
-                        <th class="p-1 md:p-2">DG</th>
+                        <th class="p-1 md:p-4 text-center text-xs md:text-base p-2">pos.</th>
+                        <th class="p-1 md:p-4 text-left">Equipo</th>
+                        <th class="p-1 md:p-4">Pts</th>
+                        <th class="p-1 md:p-4">PJ</th>
+                        <th class="p-1 md:p-4">DG</th>
                     </tr>
                     <tr v-for="(team, index) in teams"
                     class="md:text-xl hover:bg-[#373737] border-solid border-b-2 border-[#888888]">
@@ -45,11 +46,12 @@
                 </table>
             </div>
 
-            <div class="w-full flex flex-col gap-8">
+            <!--right-->
+            <div class="w-full flex flex-col gap-6">
                 <!--next match-->
                 <h1 class="text-lg md:text-xl">PRÓXIMO PARTIDO</h1>
                 <div class="md:basis-1/2 h-80 flex flex-col justify-around items-center p-4 bg-[#f6f6f6] text-[#232323]">
-                    <div class="underline text-lg">JDM #{{ this.next.Jornada }}</div>
+                    <div class="underline font-bold text-lg">JDM #{{ this.next.Jornada }}</div>
                     <div class="md:w-full md:h-24 flex flex-col md:flex-row md:justify-center md:items-center text-2xl md:text-3xl gap-2 md:gap-4">
                         <div v-if="this.next.Equipo_local == 'La Puissance'"
                         class="font-black">{{ this.next.Equipo_local }}</div>
@@ -68,19 +70,18 @@
                     
                 </div>
 
-                <br>
 
                 <!--previous matches-->
-                <h1 class="text-lg md:text-xl">PARTIDOS ANTERIORES</h1>
+                <h1 class="text-lg md:text-xl pt-6">PARTIDOS ANTERIORES</h1>
                 <div class="md:basis-1/2 h-80 flex flex-col justify-between items-center p-4 gap-4 border-solid border-4 border-[#f6f6f6]">
                     <div class="w-full flex justify-between text-lg">
-                        <div class="underline">JDM #{{ this.played[this.i].Jornada }}</div>
+                        <div class="underline font-bold">JDM #{{ this.played[this.i].Jornada }}</div>
                         <div class="text-[#888888]">
                             {{ this.played[this.i].Fecha.split("-")[2] }} / {{ this.played[this.i].Fecha.split("-")[1] }} / {{ this.played[this.i].Fecha.split("-")[0].substr(2,2) }}
                         </div>
                     </div>
                     
-                    <div class="w-full md:w-96 h-24 flex flex-col justify-center text-xl md:text-2xl text-left">
+                    <div class="w-full md:w-96 h-24 flex flex-col justify-center text-2xl text-left">
                         <div class="flex justify-between gap-4">
                             <div v-if="this.played[this.i].Equipo_local == 'La Puissance'"
                             class="font-black">{{ this.played[this.i].Equipo_local }}&nbsp;</div>
@@ -97,24 +98,21 @@
                         </div>
                     </div>
                     
-                    <div class="w-full flex text-2xl font-bold gap-4">
+                    <div class="w-full flex text-lg font-bold gap-4">
                         <button v-if="this.i == 0"
-                        class="w-1/2 bg-[#232323] border-solid border-2 border-[#888888] rounded-lg cursor-default" @click="previousMatch">&lt;</button>
+                        class="w-1/2 bg-[#232323] border-solid border-2 border-[#888888] rounded-lg cursor-default" @click="previousMatch">&nbsp;</button>
                         <button v-else
-                        class="w-1/2 bg-[#f6f6f6] text-[#232323] rounded-lg p-1" @click="previousMatch">&lt;</button>
+                        class="w-1/2 bg-[#f6f6f6] text-[#232323] rounded-lg p-1 duration-200 hover:bg-[#f6f6f6] hover:text-[#f1121f]" @click="previousMatch">← &nbsp; JDM #{{ this.i }}</button>
                         <button v-if="this.i == this.played.length - 1"
-                        class="w-1/2 bg-[#232323] border-solid border-2 border-[#888888] rounded-lg cursor-default" @click="nextMatch">&gt;</button>
+                        class="w-1/2 bg-[#232323] border-solid border-2 border-[#888888] rounded-lg cursor-default" @click="nextMatch">&nbsp;</button>
                         <button v-else
-                        class="w-1/2 bg-[#f6f6f6] text-[#232323] rounded-lg p-1" @click="nextMatch">&gt;</button>
+                        class="w-1/2 bg-[#f6f6f6] text-[#232323] rounded-lg p-1 duration-200 hover:bg-[#f6f6f6] hover:text-[#f1121f]" @click="nextMatch">JDM #{{ this.i + 2}} &nbsp; →</button>
                     </div>
-                    
                 </div>
 
                 <br>
             </div>
         </div>
-
-        
 
     </div>
 </template>
@@ -135,7 +133,7 @@ const date = new Date();
 
 const getData = async () => {
     try {
-        const response = await fetch('assets/teams.csv'); /* dev -> src/local/teams.csv */ /* prod -> assets/teams.csv */
+        const response = await fetch('src/local/teams.csv'); /* dev -> src/local/teams.csv */ /* prod -> assets/teams.csv */
         const data = await response.text();
         Papa.parse(data, {
             header: true,
@@ -147,7 +145,7 @@ const getData = async () => {
         console.log(error);
     }
     try {
-        const response = await fetch('assets/matches.csv'); /* dev -> src/local/matches.csv */ /* prod -> assets/matches.csv */
+        const response = await fetch('src/local/matches.csv'); /* dev -> src/local/matches.csv */ /* prod -> assets/matches.csv */
         const data = await response.text();
         Papa.parse(data, {
             header: true,

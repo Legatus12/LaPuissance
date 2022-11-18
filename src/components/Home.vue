@@ -1,6 +1,5 @@
 <template>
-    <div class="w-full h-full bg-[#f6f6f6] flex flex-col lg:flex-row md:flex-row gap-1 overflow-hidden">
-        
+    <div class="w-full h-full bg-[#f6f6f6] flex flex-col lg:flex-row md:flex-row gap-0.5 overflow-hidden">
         
         <div class="basis-1/2 w-full h-1/2 md:h-full bg-[#232323] bg-cover bg-center flex p-8">
             <div class="bg-[#232323] flex h-fit p-4 gap-4">
@@ -12,7 +11,7 @@
             </div>
         </div>
         
-        <div class="bg-[#f6f6f6] cursor-pointer basis-1/2 w-full h-1/2 md:h-full flex flex-col xl:grid grid-cols-2 grid-rows-2 gap-1">
+        <div class="bg-[#f6f6f6] cursor-pointer basis-1/2 w-full h-1/2 md:h-full flex flex-col xl:grid grid-cols-2 grid-rows-2 gap-0.5">
             <div class="bg-[#232323] bg-cover bg-center p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between"
             @click="render('Season')">
                 <h1 class="text-5xl font-bold">Temporada</h1>

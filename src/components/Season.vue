@@ -133,7 +133,7 @@ const date = new Date();
 
 const getData = async () => {
     try {
-        const response = await fetch('src/local/teams.csv'); /* dev -> src/local/teams.csv */ /* prod -> assets/teams.csv */
+        const response = await fetch('assets/teams.csv'); /* dev -> src/local/teams.csv */ /* prod -> assets/teams.csv */
         const data = await response.text();
         Papa.parse(data, {
             header: true,
@@ -145,7 +145,7 @@ const getData = async () => {
         console.log(error);
     }
     try {
-        const response = await fetch('src/local/matches.csv'); /* dev -> src/local/matches.csv */ /* prod -> assets/matches.csv */
+        const response = await fetch('assets/matches.csv'); /* dev -> src/local/matches.csv */ /* prod -> assets/matches.csv */
         const data = await response.text();
         Papa.parse(data, {
             header: true,

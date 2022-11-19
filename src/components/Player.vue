@@ -13,7 +13,7 @@
                 </div>
             </div>
 
-            <div class="w-full md:text-2xl flex flex-col md:items-center justify-start py-4 border-solid border-b-4 md:border-0 border-[#f6f6f6]">
+            <div class="w-full md:text-2xl flex flex-col md:items-center justify-start pb-4 border-solid border-b-4 md:border-0 border-[#f6f6f6]">
                 <div class="flex">
                     <div class="text-[#888888]">POSICIÓN |&nbsp;</div>
                     <div>{{ this.player.position }}</div>

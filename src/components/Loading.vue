@@ -1,9 +1,9 @@
 <template>
     <div class="w-full h-full flex flex-col justify-center items-center gap-16">
-        <!--<img src="../assets/img/escudo.png" class="w-48 md:w-80">-->
-        <breeding-rhombus-spinner
-        :animation-duration="2000"
-        :size="100"
+        <img src="../assets/img/escudonn.png" class="w-24 absolute">
+        <half-circle-spinner
+        :animation-duration="1000"
+        :size="240"
         color="#f1121f"
         />
     </div>
@@ -11,10 +11,10 @@
 
 <script>
 
-import { BreedingRhombusSpinner } from 'epic-spinners'
+import { HalfCircleSpinner } from 'epic-spinners'
 
 export default {
-    components: {BreedingRhombusSpinner}
+    components: {HalfCircleSpinner}
 }
 
 </script>

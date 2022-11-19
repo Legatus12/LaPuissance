@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'showcase': "url('/src/assets/img/showcase.jpg')",
+        'showcase': "url('/src/assets/img/showcase1.jpg')",
         'g1': "url('/src/assets/img/g1.jpg')",
         'g2': "url('/src/assets/img/g2.jpg')",
         'g3': "url('/src/assets/img/g3.jpg')",

@@ -38,7 +38,7 @@ export default {
     load(){
       setTimeout(() => {
         this.renderedComponent = "Home";
-      }, "3200")
+      }, "2400")
     }
   }
 }

@@ -1,7 +1,10 @@
 <template>
     <div class="w-full h-full flex flex-col">
 
-        <Back @pressed="renderFather"/>
+        <div class="w-full h-16 flex justify-between items-center">
+            <Back @pressed="backHome"/>
+            <h1 class="text-3xl md:text-4xl font-black px-8">PLANTILLA</h1>
+        </div>
 
         <div class="w-full h-full bg-[#232323] flex flex-col gap-6 p-12 overflow-y-scroll">
 
@@ -39,7 +42,6 @@ export default {
     components: {Back},
     data(){
         return{
-            father: "Home",
             squad: [players.filter(x => x.pos == "gk"),
                     players.filter(x => x.pos == "d"),
                     players.filter(x => x.pos == "m"),
@@ -48,11 +50,11 @@ export default {
         }
     },
     methods:{
-        renderFather(){
-                this.$emit("rendering", this.father);
+        backHome(){
+                this.$emit("rendering", "Home");
         },
         renderPlayer(obj){
-            this.$emit("renderingPlayer", obj);
+            //this.$emit("renderingPlayer", obj);
         }
     }
 }

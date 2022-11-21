@@ -5,14 +5,13 @@
 @media (min-width: 500px) {
     /*scrollbar*/
     ::-webkit-scrollbar{
-        background-color: #232323;
+        background-color: #424242;
         width: 12px;
     }
     ::-webkit-scrollbar-thumb{
-        background: #f6f6f6; 
-        border-radius: 10px;
+        background: #aeaeae;
     }
     ::-webkit-scrollbar-thumb:hover{
-        background: #ffffff; 
+        background: #d6d6d6; 
     }
 }

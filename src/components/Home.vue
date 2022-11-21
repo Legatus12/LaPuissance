@@ -1,55 +1,56 @@
 <template>
-    <div class="w-full h-full bg-[#f6f6f6] flex flex-col lg:flex-row md:flex-row gap-0 overflow-hidden">
-        
-        <div class="basis-1/2 w-full h-1/2 md:h-full bg-showcase bg-cover bg-center flex flex-col justify-start p-8">
-            <!--
-            <div class="flex w-fit h-fit gap-4 lg:flex bg-[#f6f6f6] border-solid border-2 border-[#232323] hidden md:flex">
-                <img src="../assets/img/escudonn.png" class="w-16 p-1">
-                <div class="w-fit p-2">
-                    <p class="text-[#232323] w-fit">Asociación deportiva</p>
-                    <h1 class="text-3xl lg:text-4xl font-bold text-[#232323]">La&nbsp;Puissance&nbsp;</h1>
-                </div>
-            </div>
-            -->
+    <div v-if="this.loading == true" class="absolute bg-[#232323] z-50 w-full h-full flex flex-col justify-center items-center gap-16">
+        <img src="../assets/img/shield.png" class="w-48">
+        <hollow-dots-spinner
+        :animation-duration="800"
+        :dot-size="32"
+        :dots-num="3"
+        color="#f1121f"
+        />
+    </div>
+    <div class="absolute w-full h-full flex flex-col items-center lg:flex-row bg-g1 bg-cover bg-center p-16 md:p-24 xl:p-32 text-[#f6f6f6] text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-black">
+        <div class="h-full flex flex-col lg:justify-center">
+            <img src="../assets/img/shieldWhite.png" class="w-32 md:w-40 lg:w-48 duration-300 hover:scale-125">
         </div>
-        
-        <div class="bg-[#f6f6f6] cursor-pointer basis-1/2 w-full h-1/2 md:h-full flex flex-col xl:grid grid-cols-2 grid-rows-2 gap-0">
-            <div class="bg-g4 bg-cover bg-center hover:bg-left duration-300 p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between"
-            @click="render('Season')">
-                <h1 class="text-5xl font-bold">Temporada</h1>
-                <p class="text-xl hidden md:inline"></p>
-            </div>
-
-            <div class="bg-g2 bg-cover bg-center hover:bg-left duration-300 p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between"
-            @click="render('Shop')">
-                <h1 class="text-5xl font-bold">Tienda</h1>
-                <p class="text-xl hidden md:inline"></p>
-            </div>
-
-            <div class="bg-g1 bg-cover bg-center hover:bg-right duration-300 p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between"
-            @click="render('Team')">
-                <h1 class="text-5xl font-bold">Plantilla</h1>
-                <p class="text-xl hidden md:inline"></p>
-            </div>
-
-            <div class="bg-g3 bg-cover bg-center hover:bg-right duration-300 p-8 h-1/4 xl:h-full flex flex-col justify-center md:justify-between"
-            @click="render('News')">
-                <h1 class="text-5xl font-bold">Noticias</h1>
-                <p class="text-xl hidden md:inline"></p>
-            </div>
+        <div class="w-full flex flex-col flex justify-center items-center lg:items-end gap-8 md:gap-12 lg:gap-16">
+            <h1 @click="render('Tables')" 
+            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Clasificación</h1>
+            <h1 @click="render('Matches')" 
+            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Partidos</h1>
+            <h1 @click="render('Team')" 
+            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Plantilla</h1>
+            <h1 @click="render('News')" 
+            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Noticias</h1>
+            <h1 @click="render('Club')" 
+            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Club</h1>
         </div>
-
     </div>
 </template>
 
 <script>
 
+import { HollowDotsSpinner } from 'epic-spinners'
+
 export default {
     name: "Home",
     emits: ["rendering"],
+    components: {HollowDotsSpinner},
+    created(){
+        this.countdown();
+    },
+    data(){
+        return{
+            loading: true
+        }
+    },
     methods:{
         render(c){
             this.$emit("rendering", c);
+        },
+        countdown(){
+            setTimeout(() => {
+                this.loading = false;
+            }, 3200);
         }
     }
 }

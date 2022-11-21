@@ -7,23 +7,20 @@
 
 <script>
 
-import Loading from './components/Loading.vue';
 import Home from './components/Home.vue';
 import Team from './components/Team.vue';
 import Player from './components/Player.vue';
-import Shop from './components/Shop.vue';
-import Season from './components/Season.vue';
+import Tables from './components/Tables.vue';
+import Matches from './components/Matches.vue';
 import News from './components/News.vue';
+import Club from './components/Club.vue';
 
 export default {
   name: "App",
-  components: {Loading, Home, Team, Player, Shop, Season, News},
-  created(){
-    this.load();
-  },
+  components: {Home, Team, Player, Tables, Matches, News, Club},
   data(){
     return{
-      renderedComponent: "Loading",
+      renderedComponent: "Home",
       renderedPlayer: null,
     }
   },
@@ -34,11 +31,6 @@ export default {
     renderPlayer(player){
       this.renderedPlayer = player;
       this.renderedComponent = "Player"
-    },
-    load(){
-      setTimeout(() => {
-        this.renderedComponent = "Home";
-      }, "2400")
     }
   }
 }

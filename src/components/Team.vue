@@ -3,7 +3,7 @@
 
         <div class="w-full h-16 flex justify-between items-center">
             <Back @pressed="backHome"/>
-            <h1 class="text-3xl md:text-4xl font-black px-8">PLANTILLA</h1>
+            <h1 class="text-4xl md:text-5xl font-black px-8">Plantilla</h1>
         </div>
 
         <div class="w-full h-full bg-[#232323] flex flex-col gap-6 p-12 overflow-y-scroll">

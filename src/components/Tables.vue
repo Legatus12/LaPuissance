@@ -3,7 +3,7 @@
         
         <div class="w-full h-16 flex justify-between items-center">
             <Back @pressed="backHome"/>
-            <h1 class="text-3xl md:text-4xl font-black px-8">CLASIFICACIÓN</h1>
+            <h1 class="text-3xl md:text-5xl font-black px-8">Clasificación</h1>
         </div>
 
         <div class="w-full h-full flex flex-col items-center md:justify-center bg-[#232323] text-[#232323] text-center md:text-xl p-8 overflow-y-scroll overflow-x-hidden">
@@ -14,24 +14,24 @@
                     <option>JDM 43</option>
                 </select>
             </div>-->
-            <table class="w-full md:w-fit">
-                <tr class="text-[#f6f6f6] border-solid border-2 border-[#f6f6f6]">
-                    <th class="font-black text-xs md:p-4">POS.</th>
-                    <th class="font-black text-left p-2 md:p-4 md:w-96">EQUIPO</th>
-                    <th class="font-black p-1 md:p-4">PTS</th>
-                    <th class="font-black p-1 md:p-4">PJ</th>
-                    <th class="font-black p-1 md:p-4">DG</th>
+            <table class="w-full md:w-fit p-4">
+                <tr class="bg-[#646464] text-[#f6f6f6] border-solid border-b-2 border-[#232323]">
+                    <th class="font-black text-xs md:p-3 lg:w-16"></th>
+                    <th class="font-black text-left p-2 md:p-3 md:w-96">EQUIPO</th>
+                    <th class="font-black p-1 md:p-3 md:w-24 lg:w-32">PTS</th>
+                    <th class="font-black p-1 md:p-3 md:w-24 lg:w-32">PJ</th>
+                    <th class="font-black p-1 md:p-3 md:w-24 lg:w-32">DG</th>
                 </tr>
                 <tr v-for="(team, index) in teams"
-                class="border-solid border-b-2 border-[#232323] bg-[#f6f6f6] hover:bg-[#d6d6d6]">
+                class="border-solid border-y-2 border-[#232323] bg-[#f6f6f6] hover:bg-[#d6d6d6]">
                     <td v-if="team.Nombre_equipo == 'La Puissance'" 
                     class="bg-[#f1121f] text-[#f6f6f6] font-bold p-2">{{ index + 1 }}º</td>
                     <td v-else 
                     class="">{{ index + 1 }}º</td>
                     <td v-if="team.Nombre_equipo == 'La Puissance'" 
-                    class="bg-[#f1121f] text-[#f6f6f6] font-black text-left p-2 md:p-4">{{ team.Nombre_equipo }}</td>
+                    class="bg-[#f1121f] text-[#f6f6f6] font-black text-left p-2 md:p-3">{{ team.Nombre_equipo }}</td>
                     <td v-else 
-                    class="text-left p-2 md:p-4">{{ team.Nombre_equipo }}</td>
+                    class="text-left p-2 md:p-3">{{ team.Nombre_equipo }}</td>
                     <td v-if="team.Nombre_equipo == 'La Puissance'" 
                     class="bg-[#f1121f] text-[#f6f6f6] font-black">{{ Number(team.Puntos) }}</td>
                     <td v-else
@@ -57,15 +57,10 @@ import Back from './Back.vue';
 
 import Papa from 'papaparse';
 import sortTeams from '../store/sortTeams.mjs';
-import sortMatches from '../store/sortMatches.mjs';
 
 let sortedTeams;
-let matches;
-let nextMatch;
 
-const date = new Date();
-
-const getData = async () => {
+const getTables = async () => {
     try {
         const response = await fetch('assets/tables.csv'); /* dev -> src/local/tables.csv */ /* prod -> assets/tables.csv */
         const data = await response.text();
@@ -78,50 +73,21 @@ const getData = async () => {
     } catch (error) {
         console.log(error);
     }
-    try {
-        const response = await fetch('assets/matches.csv'); /* dev -> src/local/matches.csv */ /* prod -> assets/matches.csv */
-        const data = await response.text();
-        Papa.parse(data, {
-            header: true,
-            complete: function(result) {
-                matches = result.data
-                                    .filter(x => x.Nombre_grupo == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && (x.Equipo_local == "La Puissance" || x.Equipo_visitante == "La Puissance") && new Date(x.Fecha) <= date)
-                                    .sort(sortMatches);
-
-                nextMatch = result.data
-                                    .filter(x => x.Nombre_grupo == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && (x.Equipo_local == "La Puissance" || x.Equipo_visitante == "La Puissance"))
-                                    .sort(sortMatches)[matches.length];
-                
-                console.log(nextMatch);
-            }
-        });
-    } catch (error) {
-        console.log(error);
-    }
 }
 
-getData();
+getTables();
 
 export default {
     emits: ["rendering"],
     components: {Back},
     data(){
         return{
-            i: matches.length - 1,
-            teams: sortedTeams,
-            played: matches,
-            next: nextMatch
+            teams: sortedTeams
         }
     },
     methods:{
         backHome(){
             this.$emit("rendering", "Home");
-        },
-        previousMatch(){
-            this.i > 0 ? this.i -- : this.i;
-        },
-        nextMatch(){
-            this.i < this.played.length - 1 ? this.i ++ : this.i;
         }
     }
 }

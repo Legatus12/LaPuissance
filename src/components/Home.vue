@@ -29,7 +29,7 @@
 
 <script>
 
-import { HollowDotsSpinner } from 'epic-spinners'
+import { HollowDotsSpinner } from 'epic-spinners';
 
 export default {
     name: "Home",

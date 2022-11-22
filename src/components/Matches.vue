@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-full flex flex-col">
 
-        <div class="w-full h-16 flex justify-between items-center">
+        <div class="w-full h-16 flex justify-between items-center border-solid border-b-2 border-[#232323]">
             <Back @pressed="backHome"/>
             <h1 class="text-4xl md:text-5xl font-black px-8">Partidos</h1>
         </div>

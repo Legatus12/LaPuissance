@@ -54,7 +54,7 @@ export default {
                 this.$emit("rendering", "Home");
         },
         renderPlayer(obj){
-            //this.$emit("renderingPlayer", obj);
+            this.$emit("renderingPlayer", obj);
         }
     }
 }

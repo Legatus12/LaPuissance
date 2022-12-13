@@ -1,53 +1,46 @@
 <template>
-    <div class="w-full h-full flex flex-col">
-        
-        <div class="w-full h-16 flex justify-between items-center border-solid border-b-2 border-[#232323]">
-            <Back @pressed="backHome"/>
-            <h1 class="text-4xl md:text-5xl font-black px-8">Clasificación</h1>
-        </div>
+    <div class="flex flex-col">
+        <div class="h-16">
 
-        <div class="w-full h-full flex flex-col items-center md:justify-center bg-[#232323] text-[#232323] text-center md:text-xl p-8 overflow-y-scroll overflow-x-hidden">
-            <!--
-            <div class="w-full flex p-2 bg-[#232323] text-[#f6f6f6] border-solid border-2 border-[#f6f6f6]">
-                CLASIFICACIÓN&nbsp;-
-                <select class="duration-300 cursor-pointer bg-[#232323]">
-                    <option>JDM 43</option>
-                </select>
-            </div>-->
-            <table class="w-full md:w-fit p-4">
-                <tr class="bg-[#646464] text-[#f6f6f6] border-solid border-b-2 border-[#232323]">
-                    <th class="font-black text-xs md:p-3 lg:w-16"></th>
-                    <th class="font-black text-left p-2 md:p-3 md:w-96">EQUIPO</th>
-                    <th class="font-black p-1 md:p-3 md:w-24 lg:w-32">PTS</th>
-                    <th class="font-black p-1 md:p-3 md:w-24 lg:w-32">PJ</th>
-                    <th class="font-black p-1 md:p-3 md:w-24 lg:w-32">DG</th>
+        </div>
+        <div class="h-16 flex items-center bg-[#232323] text-[#f6f6f6] p-4">
+            <h1>Competición - </h1>
+            <select class="bg-[#232323]">
+                <option>JDM43</option>
+            </select>
+        </div>
+        <div class="flex justify-center">
+            <table class="text-center">
+                <tr class="">
+                    <th></th>
+                    <th class="text-left">EQUIPO</th>
+                    <th>PTS</th>
+                    <th>PJ</th>
+                    <th>DG</th>
                 </tr>
-                <tr v-for="(team, index) in teams"
-                class="border-solid border-y-2 border-[#232323] bg-[#f6f6f6] hover:bg-[#d6d6d6]">
-                    <td v-if="team.Nombre_equipo == 'La Puissance'" 
-                    class="bg-[#f1121f] text-[#f6f6f6] font-bold p-2">{{ index + 1 }}º</td>
-                    <td v-else 
-                    class="">{{ index + 1 }}º</td>
-                    <td v-if="team.Nombre_equipo == 'La Puissance'" 
-                    class="bg-[#f1121f] text-[#f6f6f6] font-black text-left p-2 md:p-3">{{ team.Nombre_equipo }}</td>
-                    <td v-else 
-                    class="text-left p-2 md:p-3">{{ team.Nombre_equipo }}</td>
-                    <td v-if="team.Nombre_equipo == 'La Puissance'" 
-                    class="bg-[#f1121f] text-[#f6f6f6] font-black">{{ Number(team.Puntos) }}</td>
-                    <td v-else
-                    class="font-bold">{{ Number(team.Puntos) }}</td>
-                    <td v-if="team.Nombre_equipo == 'La Puissance'"  
-                    class="bg-[#f1121f] text-[#f6f6f6]">{{ team.Partidos_jugados }}</td>
-                    <td v-else 
-                    class="">{{ team.Partidos_jugados }}</td>
-                    <td v-if="team.Nombre_equipo == 'La Puissance'"  
-                    class="bg-[#f1121f] text-[#f6f6f6]">{{ team.Goles_favor - team.Goles_contra }}</td>
-                    <td v-else 
-                    class="">{{ team.Goles_favor - team.Goles_contra }}</td>
+                <tr v-for="(team, index) in teams">
+                    <td class="text-right"
+                    v-if="team.Nombre_equipo == 'La Puissance'">{{ index + 1 }}º</td>
+                    <td class="text-right"
+                    v-else>{{ index + 1 }}º</td>
+
+                    <td class="text-left"
+                    v-if="team.Nombre_equipo == 'La Puissance'">{{ team.Nombre_equipo }}</td>
+                    <td class="text-left"
+                    v-else>{{ team.Nombre_equipo }}</td>
+
+                    <td v-if="team.Nombre_equipo == 'La Puissance'">{{ Number(team.Puntos) }}</td>
+                    <td v-else>{{ Number(team.Puntos) }}</td>
+
+                    <td v-if="team.Nombre_equipo == 'La Puissance'">{{ team.Partidos_jugados }}</td>
+                    <td v-else>{{ team.Partidos_jugados }}</td>
+
+                    <td v-if="team.Nombre_equipo == 'La Puissance'">{{ team.Goles_favor - team.Goles_contra }}</td>
+                    <td v-else>{{ team.Goles_favor - team.Goles_contra }}</td>
                 </tr>
             </table>
         </div>
-
+        <br><br>
     </div>
 </template>
 
@@ -62,7 +55,7 @@ let sortedTeams;
 
 const getTables = async () => {
     try {
-        const response = await fetch('assets/tables.csv'); /* dev -> src/local/tables.csv */ /* prod -> assets/tables.csv */
+        const response = await fetch('src/local/tables.csv'); /* dev -> src/local/tables.csv */ /* prod -> assets/tables.csv */
         const data = await response.text();
         Papa.parse(data, {
             header: true,
@@ -94,4 +87,11 @@ export default {
 
 </script>
 
-<style></style>
+<style scoped>
+
+th, td{
+    padding: 0.5rem;
+    border-bottom: 2px solid #232323;
+}
+
+</style>

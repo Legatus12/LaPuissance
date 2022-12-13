@@ -1,60 +1,60 @@
 <template>
-    <div v-if="this.loading == true" class="absolute bg-[#232323] z-50 w-full h-full flex flex-col justify-center items-center gap-16">
-        <img src="../assets/img/shield.png" class="w-48">
-        <hollow-dots-spinner
-        :animation-duration="800"
-        :dot-size="32"
-        :dots-num="3"
-        color="#f1121f"
-        />
-    </div>
-    <div class="absolute w-full h-full flex flex-col items-center lg:flex-row bg-g1 bg-cover bg-center p-16 md:p-24 xl:p-32 text-[#f6f6f6] text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-black">
-        <div class="h-full flex flex-col lg:justify-center">
-            <img src="../assets/img/shieldWhite.png" class="w-32 md:w-40 lg:w-48 duration-300 hover:scale-125">
+    <div class="home-container">
+        <div class="half1">
+            <h1 class="section" @click="render('Tables')">&gt;&nbsp;Clasificación</h1>
+            <h1 class="section" @click="render(Matches)">&gt;&nbsp;Partidos</h1>
+            <h1 class="section" @click="render(Team)">&gt;&nbsp;Plantilla</h1>
+            <h1 class="section" @click="render(Ranking)">&gt;&nbsp;Estadísticas</h1>
         </div>
-        <div class="w-full flex flex-col flex justify-center items-center lg:items-end gap-8 md:gap-12 lg:gap-16">
-            <h1 @click="render('Tables')" 
-            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Clasificación</h1>
-            <h1 @click="render('Matches')" 
-            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Partidos</h1>
-            <h1 @click="render('Team')" 
-            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Plantilla</h1>
-            <h1 @click="render('News')" 
-            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Noticias</h1>
-            <h1 @click="render('Club')" 
-            class="lg:hover:-translate-x-20 hover:text-[#f1121f] duration-300 cursor-pointer drop-shadow-2xl shadow-[#f6f6f6]">Club</h1>
+        <div class="half2">
+            <div class="flex justify-end gap-2">
+                <div class="icon-container"><img src="../assets/img/ig.png" class="w-8"></div>
+                <div class="icon-container"><img src="../assets/img/tiktok.png" class="w-8"></div>
+                <div class="icon-container"><img src="../assets/img/mail.png" class="w-8"></div>
+            </div>
+            <div>
+                <h1 class="title">La&nbsp;Puissance</h1>
+                <p class="subtitle">Club de Fútbol</p>
+            </div>
         </div>
     </div>
 </template>
 
-<script>
+<script setup>
 
-import { HollowDotsSpinner } from 'epic-spinners';
+const emits = defineEmits(["rendering"])
 
-export default {
-    name: "Home",
-    emits: ["rendering"],
-    components: {HollowDotsSpinner},
-    created(){
-        this.countdown();
-    },
-    data(){
-        return{
-            loading: true
-        }
-    },
-    methods:{
-        render(c){
-            this.$emit("rendering", c);
-        },
-        countdown(){
-            setTimeout(() => {
-                this.loading = false;
-            }, 3200);
-        }
-    }
-}
+const render = (component) => emits("rendering", component);
 
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.home-container{
+    @apply w-full h-full flex flex-col-reverse md:flex-row bg-[#f6f6f6] overflow-hidden
+}
+
+.half1{
+    @apply w-full md:w-1/2 h-1/2 md:h-full italic flex flex-col gap-6 md:gap-12 justify-center bg-[#232323] md:bg-g1 bg-cover bg-center text-[#f6f6f6] text-4xl md:text-5xl lg:text-6xl font-black p-8 lg:p-16
+}
+
+.half2{
+    @apply w-full md:w-1/2 h-1/2 md:h-full flex flex-col-reverse md:flex-col justify-between p-8 lg:p-16
+}
+.icon-container{
+    @apply flex items-center justify-center rounded-full w-16 h-16 hover:bg-[#d6d6d6] cursor-pointer
+}
+
+.section{
+    @apply hover:text-[#f1121f] hover:translate-x-10 cursor-pointer w-fit
+}
+
+.title{
+    @apply font-black text-4xl md:text-5xl lg:text-6xl xl:text-6xl
+}
+
+.subtitle{
+    @apply text-lg md:text-2xl lg:text-2xl text-[#f1121f]
+}
+
+</style>

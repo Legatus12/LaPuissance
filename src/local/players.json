@@ -1,184 +1,156 @@
-{
-    "1":{
+[
+    {
         "n": 1,
         "pos": "gk",
         "position": "PORTERO",
         "nickname": "DAVID",
         "name": "",
         "est": 2022,
-        "season":{
-            "jdm43":{
-                "gp": 5, "g": 0, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 6, "g": 0, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
+        ]
     },
-    "4":{
+    {
         "n": 4,
-        "pos": "m",
+        "pos": "mf",
         "position": "TODOCAMPISTA",
         "nickname": "GODOY",
         "name": "Mario Martín",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 6, "g": 12, "a": 4, "rc": 0, "yc": 2, "mvp": 3, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 7, "g": 13, "a": 4, "rc": 0, "yc": 2, "mvp": 3}
+        ]
     },
-    "5":{
+    {
         "n": 5,
-        "pos": "d",
+        "pos": "df",
         "position": "DEFENSA CENTRAL",
         "nickname": "'PAPI MAIK'",
         "name": "",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 6, "g": 1, "a": 0, "rc": 0, "yc": 1, "mvp": 1, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 7, "g": 1, "a": 0, "rc": 0, "yc": 1, "mvp": 1}
+        ]
     },
-    "6":{
+    {
         "n": 6,
-        "pos": "m",
+        "pos": "mf",
         "position": "MEDIOCENTRO DEFENSIVO",
         "nickname": "ARTURO",
         "name": "",
         "est": 2022,
-        "season":{
-            "jdm43":{
-                "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 0, "mvp": 1, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 0, "mvp": 1}
+        ]
     },
-    "9":{
+    {
         "n": 9,
-        "pos": "s",
+        "pos": "st",
         "position": "DELANTERO",
         "nickname": "'EL PILLO'",
         "name": "",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
+        ]
     },
-    "10":{
+    {
         "n": 10,
-        "pos": "s",
+        "pos": "st",
         "position": "DELANTERO",
         "nickname": "ALEXANDER",
         "name": "Fredy",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 3, "g": 6, "a": 0, "rc": 0, "yc": 1, "mvp": 0, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 4, "g": 6, "a": 0, "rc": 0, "yc": 1, "mvp": 0}
+        ]
     },
-    "11":{
+    {
         "n": 11,
-        "pos": "m",
+        "pos": "mf",
         "position": "MEDIAPUNTA",
         "nickname": "HUGO",
         "name": "",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 6, "g": 1, "a": 1, "rc": 0, "yc": 0, "mvp": 0, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 7, "g": 1, "a": 1, "rc": 0, "yc": 0, "mvp": 0}
+        ]
     },
-    "12":{
+    {
         "n": 12,
-        "pos": "d",
+        "pos": "df",
         "position": "DEFENSA LATERAL",
         "nickname": "SANTOS",
         "name": "Pablo Lantigua",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 6, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 7, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0}
+        ]
     },
-    "14":{
+    {
         "n": 14,
-        "pos": "d",
+        "pos": "df",
         "position": "DEFENSA LATERAL",
         "nickname": "BARBU",
         "name": "Cristian Andrei",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 6, "g": 5, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 7, "g": 6, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
+        ]
     },
-    "17":{
+    {
         "n": 17,
-        "pos": "m",
+        "pos": "mf",
         "position": "MEDIAPUNTA",
         "nickname": "ALEX",
         "name": "",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 4, "g": 3, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 6, "g": 3, "a": 3, "rc": 0, "yc": 0, "mvp": 0}
+        ]
     },
-    "19":{
+    {
         "n": 19,
-        "pos": "m",
+        "pos": "mf",
         "position": "MEDIOCENTRO",
         "nickname": "'LUISMO'",
         "name": "",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 6, "g": 5, "a": 1, "rc": 0, "yc": 0, "mvp": 0, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 7, "g": 6, "a": 2, "rc": 0, "yc": 0, "mvp": 0}
+        ]
     },
-    "69":{
+    {
         "n": 69,
-        "pos": "d",
+        "pos": "df",
         "position": "DEFENSA LATERAL",
         "nickname": "'CHARLI'",
         "name": "",
         "est": 2022,
-        "season":{
-            "jdm43":{
-                "gp": 6, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 1, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 7, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 1}
+        ]
     },
-    "77":{
+    {
         "n": 77,
-        "pos": "d",
+        "pos": "df",
         "position": "TODOCAMPISTA",
         "nickname": "OFKIR",
         "name": "Mohamed",
         "est": 2022,
-        "season":{
-            "jdm43":{
-                "gp": 1, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
-            }
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 1, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
+        ]
     },
-    "99":{
+    {
         "n": 99,
         "pos": "gk",
         "position": "PORTERO",
         "nickname": "CABALLERO",
         "name": "Francisco",
         "est": 2021,
-        "season":{
-            "jdm43":{
-                "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "py": 0
-            } 
-        }
+        "seasons":[
+            {"id": "jdm43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
+        ]
     }
-}
+]

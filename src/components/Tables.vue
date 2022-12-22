@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col">
         <div class="h-16">
-
+            <Back @back="backHome()"/>
         </div>
         <div class="h-16 flex items-center bg-[#232323] text-[#f6f6f6] p-4">
             <h1>Competición - </h1>
@@ -44,9 +44,11 @@
     </div>
 </template>
 
-<script lang="ts">
+
+<script setup>
 
 import Back from './Back.vue';
+import Home from './Home.vue';
 
 import Papa from 'papaparse';
 import sortTeams from '../store/sortTeams.mjs';
@@ -70,22 +72,14 @@ const getTables = async () => {
 
 getTables();
 
-export default {
-    emits: ["rendering"],
-    components: {Back},
-    data(){
-        return{
-            teams: sortedTeams
-        }
-    },
-    methods:{
-        backHome(){
-            this.$emit("rendering", "Home");
-        }
-    }
+const emits = defineEmits(["rendering"]);
+
+const backHome = () =>{
+    emits("rendering", Home)
 }
 
 </script>
+
 
 <style scoped>
 

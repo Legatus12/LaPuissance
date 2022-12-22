@@ -1,21 +1,40 @@
 <template>
     <div class="home-container">
-        <div class="left">
-            <h1>
-                La Puissance
-            </h1>
-            <p>
-                CLUB DE FÚTBOL
-            </p>
+        <div class="head">
+            <h1>La&nbsp;Puissance</h1>
+            <p>club de fútbol</p>
         </div>
-        <div class="right">
-            <p>TEMPORADA</p>
-            <h1>Clasificación</h1>
-            <h1>Partidos</h1>
+
+        <div class="image"></div>
+
+        <div class="menu">
+
+            <h1>
+                Club
+            </h1>
+
             <br>
+
+            <p>TEMPORADA</p>
+
+            <h1 @click="render(Tables)">
+                Clasificación
+            </h1>
+            <h1 @click="render(Matches)">
+                Partidos
+            </h1>
+
+            <br>
+
             <p>EQUIPO</p>
-            <h1>Plantilla</h1>
-            <h1>Estadísticas</h1>
+
+            <h1 @click="render(Squad)">
+                Plantilla
+            </h1>
+            <h1 @click="render(Ranking)">
+                Estadísticas
+            </h1>
+
         </div>
     </div>
 </template>
@@ -23,7 +42,12 @@
 
 <script setup>
 
-const emits = defineEmits(["rendering"])
+import Tables from './Tables.vue';
+import Matches from './Matches.vue';
+import Squad from './Squad.vue';
+import Ranking from './Ranking.vue';
+
+const emits = defineEmits(["rendering"]);
 
 const render = (component) => emits("rendering", component);
 
@@ -33,31 +57,35 @@ const render = (component) => emits("rendering", component);
 <style scoped>
 
 .home-container{
-    @apply w-full h-full flex
+    @apply w-full h-full flex overflow-hidden
 }
 
-.left{
-    @apply w-1/2 h-full bg-g1 bg-cover bg-center p-16
+.head{
+    @apply absolute top-12 left-12
 }
 
-.right{
-    @apply w-1/2 h-full bg-[#232323] flex flex-col items-end justify-end p-16
+.head h1{
+    @apply font-bold text-4xl md:text-6xl lg:text-6xl
 }
 
-.left h1{
-    @apply font-black text-8xl
+.head p{
+    @apply w-fit text-xl md:text-2xl text-[#f1121f] lg:bg-[#f1121f] lg:text-[#f6f6f6] lg:font-bold lg:px-2
 }
 
-.left p{
-    @apply text-4xl text-[#f6f6f6]
+.image{
+    @apply hidden lg:block w-full h-full bg-g1 bg-cover bg-center p-16 shrink overflow-x-hidden
 }
 
-.right h1{
-    @apply font-black text-6xl hover:-translate-x-8 cursor-pointer py-2
+.menu{
+    @apply w-full lg:w-fit h-full bg-[#232323] flex flex-col items-end justify-end p-12 md:p-16
 }
 
-.right p{
-    @apply text-2xl
+.menu h1{
+    @apply font-black text-4xl md:text-6xl hover:-translate-x-8 cursor-pointer duration-200 py-2 hover:text-[#f1121f]
+}
+
+.menu p{
+    @apply text-xl md:text-3xl font-light py-2
 }
 
 </style>

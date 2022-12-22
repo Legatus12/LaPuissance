@@ -1,24 +1,25 @@
 <template>
     <div class="home-container">
-        <div class="half1">
-            <h1 class="section" @click="render('Tables')">&gt;&nbsp;Clasificación</h1>
-            <h1 class="section" @click="render(Matches)">&gt;&nbsp;Partidos</h1>
-            <h1 class="section" @click="render(Team)">&gt;&nbsp;Plantilla</h1>
-            <h1 class="section" @click="render(Ranking)">&gt;&nbsp;Estadísticas</h1>
+        <div class="left">
+            <h1>
+                La Puissance
+            </h1>
+            <p>
+                CLUB DE FÚTBOL
+            </p>
         </div>
-        <div class="half2">
-            <div class="flex justify-end gap-2">
-                <div class="icon-container"><img src="../assets/img/ig.png" class="w-8"></div>
-                <div class="icon-container"><img src="../assets/img/tiktok.png" class="w-8"></div>
-                <div class="icon-container"><img src="../assets/img/mail.png" class="w-8"></div>
-            </div>
-            <div>
-                <h1 class="title">La&nbsp;Puissance</h1>
-                <p class="subtitle">Club de Fútbol</p>
-            </div>
+        <div class="right">
+            <p>TEMPORADA</p>
+            <h1>Clasificación</h1>
+            <h1>Partidos</h1>
+            <br>
+            <p>EQUIPO</p>
+            <h1>Plantilla</h1>
+            <h1>Estadísticas</h1>
         </div>
     </div>
 </template>
+
 
 <script setup>
 
@@ -28,33 +29,35 @@ const render = (component) => emits("rendering", component);
 
 </script>
 
+
 <style scoped>
 
 .home-container{
-    @apply w-full h-full flex flex-col-reverse md:flex-row bg-[#f6f6f6] overflow-hidden
+    @apply w-full h-full flex
 }
 
-.half1{
-    @apply w-full md:w-1/2 h-1/2 md:h-full italic flex flex-col gap-6 md:gap-12 justify-center bg-[#232323] md:bg-g1 bg-cover bg-center text-[#f6f6f6] text-4xl md:text-5xl lg:text-6xl font-black p-8 lg:p-16
+.left{
+    @apply w-1/2 h-full bg-g1 bg-cover bg-center p-16
 }
 
-.half2{
-    @apply w-full md:w-1/2 h-1/2 md:h-full flex flex-col-reverse md:flex-col justify-between p-8 lg:p-16
-}
-.icon-container{
-    @apply flex items-center justify-center rounded-full w-16 h-16 hover:bg-[#d6d6d6] cursor-pointer
+.right{
+    @apply w-1/2 h-full bg-[#232323] flex flex-col items-end justify-end p-16
 }
 
-.section{
-    @apply hover:text-[#f1121f] hover:translate-x-10 cursor-pointer w-fit
+.left h1{
+    @apply font-black text-8xl
 }
 
-.title{
-    @apply font-black text-4xl md:text-5xl lg:text-6xl xl:text-6xl
+.left p{
+    @apply text-4xl text-[#f6f6f6]
 }
 
-.subtitle{
-    @apply text-lg md:text-2xl lg:text-2xl text-[#f1121f]
+.right h1{
+    @apply font-black text-6xl hover:-translate-x-8 cursor-pointer py-2
+}
+
+.right p{
+    @apply text-2xl
 }
 
 </style>

@@ -15,3 +15,17 @@
         background: #d6d6d6; 
     }
 }
+
+select{
+    background-color: #f6f6f6;
+}
+
+#app{
+    overflow-x: hidden;
+    background-color: #232323;
+    scroll-behavior: smooth;
+}
+
+.component{
+    @apply w-full h-full flex flex-col
+}

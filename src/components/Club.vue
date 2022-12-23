@@ -1,29 +1,21 @@
 <template>
-    <div class="w-full h-full flex flex-col">
-
-        <div class="w-full h-16 flex justify-between items-center">
-            <Back @pressed="backHome"/>
-            <h1 class="text-4xl md:text-5xl font-black px-8">Club</h1>
-        </div>
-
-        <div class="w-full h-full bg-[#232323] text-[#f6f6f6] flex flex-col md:flex-row items-center justify-around p-16 md:p-32 gap-16 md:gap-32">
-            <p class="text-4xl md:text-6xl text-bold">EN DESARROLLO</p>
+    <div class="component">
+        <Header :title="'Club'" @back="goBack()" />
+        <div class="">
+            
         </div>
     </div>
 </template>
 
-<script lang="ts">
+<script setup>
 
-import Back from './Back.vue';
+import Header from './Header.vue';
+import Home from './Home.vue';
 
-export default {
-    emits: ["rendering"],
-    components: {Back},
-    methods:{
-        backHome(){
-            this.$emit("rendering", "Home");
-        }
-    }
+const emits = defineEmits(["renderingComponent"]);
+
+const goBack = () =>{
+    emits("renderingComponent", Home)
 }
 
 </script>

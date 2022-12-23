@@ -1,6 +1,6 @@
 <template>
   <KeepAlive>
-    <component :is="renderedComponent" @rendering="renderComponent" @renderingPlayer="renderPlayer" :player=renderedPlayer />
+    <component :is="renderedComponent" @renderingComponent="renderComponent" @renderingPlayer="renderPlayer" :player=renderedPlayer />
   </KeepAlive>
   
 </template>

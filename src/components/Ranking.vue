@@ -1,10 +1,22 @@
 <template>
-    <div>
-
+    <div class="component">
+        <Header :title="'Estadísticas'" @back="goBack()" />
+        <div class="">
+            
+        </div>
     </div>
 </template>
 
 <script setup>
+
+import Header from './Header.vue';
+import Home from './Home.vue';
+
+const emits = defineEmits(["renderingComponent"]);
+
+const goBack = () =>{
+    emits("renderingComponent", Home)
+}
 
 /*
 const sorted = input.sort((a, b) => {

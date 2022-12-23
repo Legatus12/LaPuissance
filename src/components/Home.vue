@@ -9,7 +9,7 @@
 
         <div class="menu">
 
-            <h1>
+            <h1 @click="render(Club)" class="line-through text-[#646464]">
                 Club
             </h1>
 
@@ -20,7 +20,7 @@
             <h1 @click="render(Tables)">
                 Clasificación
             </h1>
-            <h1 @click="render(Matches)">
+            <h1 @click="render(Matches)" class="line-through text-[#646464]">
                 Partidos
             </h1>
 
@@ -31,7 +31,7 @@
             <h1 @click="render(Squad)">
                 Plantilla
             </h1>
-            <h1 @click="render(Ranking)">
+            <h1 @click="render(Ranking)" class="line-through text-[#646464]">
                 Estadísticas
             </h1>
 
@@ -42,14 +42,15 @@
 
 <script setup>
 
+import Club from './Club.vue';
 import Tables from './Tables.vue';
 import Matches from './Matches.vue';
 import Squad from './Squad.vue';
 import Ranking from './Ranking.vue';
 
-const emits = defineEmits(["rendering"]);
+const emits = defineEmits(["renderingComponent"]);
 
-const render = (component) => emits("rendering", component);
+const render = (component) => emits("renderingComponent", component);
 
 </script>
 
@@ -73,11 +74,11 @@ const render = (component) => emits("rendering", component);
 }
 
 .image{
-    @apply hidden lg:block w-full h-full bg-g1 bg-cover bg-center p-16 shrink overflow-x-hidden
+    @apply hidden lg:block w-full h-full bg-bg1 bg-cover bg-center p-16 shrink overflow-x-hidden
 }
 
 .menu{
-    @apply w-full lg:w-fit h-full bg-[#232323] flex flex-col items-end justify-end p-12 md:p-16
+    @apply w-full lg:w-fit h-full bg-gradient-to-b from-[#232323] to-[#373737] flex flex-col items-end justify-end p-12 md:p-16
 }
 
 .menu h1{

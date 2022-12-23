@@ -7,14 +7,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'showcase': "url('/src/assets/img/showcase1.jpg')",
-        'g1': "url('/src/assets/img/g1.jpg')",
-        'g2': "url('/src/assets/img/g2.jpg')",
-        'g3': "url('/src/assets/img/g3.jpg')",
-        'g4': "url('/src/assets/img/g4.jpg')",
-        'shield': "url('/src/assets/img/shield.png')",
-        'shieldSmall': "url('/src/assets/shieldSmall.png')",
-        'shieldWhite': "url('/src/assets/shieldWhite.png')"
+        'bg1': "url('/src/assets/img/bg1.jpg')",
+        'bg2': "url('/src/assets/img/bg2.jpg')",
+        'bg3': "url('/src/assets/img/bg3.jpg')",
+        'bg4': "url('/src/assets/img/bg4.jpg')",
+        'pimg': "url('/src/assets/img/player_image.jpg')"
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif']

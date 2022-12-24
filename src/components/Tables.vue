@@ -98,7 +98,7 @@ onMounted(() => getTables());
 const emits = defineEmits(["renderingComponent"]);
 
 const goBack = () =>{
-    emits("renderingComponent", Home)
+    emits("renderingComponent", Home);
 }
 
 </script>
@@ -111,7 +111,7 @@ const goBack = () =>{
 }
 
 .table{
-    @apply w-full h-full bg-gradient-to-b from-[#232323] to-[#373737] flex justify-center md:px-16 md:py-4 md:text-xl overflow-y-auto
+    @apply w-full h-full bg-gradient-to-b from-[#232323] to-[#373737] flex justify-center md:p-12 md:text-xl overflow-y-auto
 }
 
 .lp{
@@ -123,14 +123,8 @@ const goBack = () =>{
 }
 
 th, td{
-    padding: 0.75rem 0.5rem;
+    padding: 0.5rem;
     border-bottom: 2px solid #646464;
-}
-
-@media (min-width: 768px){
-    th, td{
-        padding: 0.75rem 1rem;
-    }
 }
 
 </style>

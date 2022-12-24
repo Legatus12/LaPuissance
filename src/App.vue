@@ -7,13 +7,13 @@
 
 <script setup>
 
-import { shallowRef } from 'vue';
+import { reactive, shallowRef } from 'vue';
 
 import Home from './components/Home.vue';
 import Player from './components/Player.vue';
 
 const renderedComponent = shallowRef(Home);
-const renderedPlayer = {};
+const renderedPlayer = reactive({});
 
 const renderComponent = (component) =>{
   renderedComponent.value = component;

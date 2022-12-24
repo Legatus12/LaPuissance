@@ -11,7 +11,7 @@ module.exports = {
         'bg2': "url('/src/assets/img/bg2.jpg')",
         'bg3': "url('/src/assets/img/bg3.jpg')",
         'bg4': "url('/src/assets/img/bg4.jpg')",
-        'pimg': "url('/src/assets/img/player_image.jpg')"
+        'vector': "url('/src/assets/img/vector.png')"
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif']

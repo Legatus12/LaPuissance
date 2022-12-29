@@ -10,7 +10,7 @@
             {"id": "JDM43", "gp": 7, "g": 0, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 4,
@@ -23,7 +23,7 @@
             {"id": "JDM43", "gp": 8, "g": 14, "a": 5, "rc": 0, "yc": 2, "mvp": 3}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 5,
@@ -36,7 +36,7 @@
             {"id": "JDM43", "gp": 8, "g": 2, "a": 0, "rc": 0, "yc": 1, "mvp": 1}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 6,
@@ -49,7 +49,7 @@
             {"id": "JDM43", "gp": 5, "g": 0, "a": 1, "rc": 0, "yc": 1, "mvp": 1}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 9,
@@ -62,7 +62,7 @@
             {"id": "JDM43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 10,
@@ -75,7 +75,7 @@
             {"id": "JDM43", "gp": 4, "g": 6, "a": 0, "rc": 0, "yc": 1, "mvp": 0}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 11,
@@ -88,7 +88,7 @@
             {"id": "JDM43", "gp": 8, "g": 3, "a": 1, "rc": 0, "yc": 0, "mvp": 1}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 12,
@@ -102,7 +102,7 @@
             {"id": "JDM44", "gp": 18, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 14,
@@ -115,7 +115,7 @@
             {"id": "JDM43", "gp": 8, "g": 7, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 17,
@@ -128,7 +128,7 @@
             {"id": "JDM43", "gp": 7, "g": 4, "a": 4, "rc": 0, "yc": 0, "mvp": 0}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 19,
@@ -141,7 +141,7 @@
             {"id": "JDM43", "gp": 8, "g": 6, "a": 3, "rc": 0, "yc": 0, "mvp": 0}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 69,
@@ -154,7 +154,7 @@
             {"id": "JDM43", "gp": 8, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 1}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 77,
@@ -167,7 +167,7 @@
             {"id": "JDM43", "gp": 1, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     },
     {
         "n": 99,
@@ -180,6 +180,6 @@
             {"id": "JDM43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
         ],
         "trophies": "-",
-        "img": "/assets/img/vector.png"
+        "img": "/assets/vector.png"
     }
 ]

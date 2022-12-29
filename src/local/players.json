@@ -7,19 +7,21 @@
         "name": "",
         "est": 2022,
         "seasons":[
-            {"id": "jdm43", "gp": 6, "g": 0, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
-        ]
+            {"id": "JDM43", "gp": 7, "g": 0, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
+        ],
+        "trophies": "-"
     },
     {
         "n": 4,
         "pos": "mf",
-        "position": "TODOCAMPISTA",
+        "position": "AS",
         "nickname": "GODOY",
         "name": "Mario Martín",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 7, "g": 13, "a": 4, "rc": 0, "yc": 2, "mvp": 3}
-        ]
+            {"id": "JDM43", "gp": 8, "g": 14, "a": 5, "rc": 0, "yc": 2, "mvp": 3}
+        ],
+        "trophies": "-"
     },
     {
         "n": 5,
@@ -29,19 +31,21 @@
         "name": "",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 7, "g": 1, "a": 0, "rc": 0, "yc": 1, "mvp": 1}
-        ]
+            {"id": "JDM43", "gp": 8, "g": 2, "a": 0, "rc": 0, "yc": 1, "mvp": 1}
+        ],
+        "trophies": "-"
     },
     {
         "n": 6,
         "pos": "mf",
-        "position": "MEDIOCENTRO DEFENSIVO",
+        "position": "MEDIOCENTRO",
         "nickname": "ARTURO",
         "name": "",
         "est": 2022,
         "seasons":[
-            {"id": "jdm43", "gp": 4, "g": 0, "a": 1, "rc": 0, "yc": 0, "mvp": 1}
-        ]
+            {"id": "JDM43", "gp": 5, "g": 0, "a": 1, "rc": 0, "yc": 1, "mvp": 1}
+        ],
+        "trophies": "-"
     },
     {
         "n": 9,
@@ -51,8 +55,9 @@
         "name": "",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
-        ]
+            {"id": "JDM43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
+        ],
+        "trophies": "-"
     },
     {
         "n": 10,
@@ -62,8 +67,9 @@
         "name": "Fredy",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 4, "g": 6, "a": 0, "rc": 0, "yc": 1, "mvp": 0}
-        ]
+            {"id": "JDM43", "gp": 4, "g": 6, "a": 0, "rc": 0, "yc": 1, "mvp": 0}
+        ],
+        "trophies": "-"
     },
     {
         "n": 11,
@@ -73,8 +79,9 @@
         "name": "",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 7, "g": 1, "a": 1, "rc": 0, "yc": 0, "mvp": 0}
-        ]
+            {"id": "JDM43", "gp": 8, "g": 3, "a": 1, "rc": 0, "yc": 0, "mvp": 1}
+        ],
+        "trophies": "-"
     },
     {
         "n": 12,
@@ -84,19 +91,21 @@
         "name": "Pablo Lantigua",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 7, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0}
-        ]
+            {"id": "JDM43", "gp": 8, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0}
+        ],
+        "trophies": "-"
     },
     {
         "n": 14,
         "pos": "df",
-        "position": "DEFENSA LATERAL",
+        "position": "TANQUE",
         "nickname": "BARBU",
         "name": "Cristian Andrei",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 7, "g": 6, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
-        ]
+            {"id": "JDM43", "gp": 8, "g": 7, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
+        ],
+        "trophies": "-"
     },
     {
         "n": 17,
@@ -106,8 +115,9 @@
         "name": "",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 6, "g": 3, "a": 3, "rc": 0, "yc": 0, "mvp": 0}
-        ]
+            {"id": "JDM43", "gp": 7, "g": 4, "a": 4, "rc": 0, "yc": 0, "mvp": 0}
+        ],
+        "trophies": "-"
     },
     {
         "n": 19,
@@ -117,8 +127,9 @@
         "name": "",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 7, "g": 6, "a": 2, "rc": 0, "yc": 0, "mvp": 0}
-        ]
+            {"id": "JDM43", "gp": 8, "g": 6, "a": 3, "rc": 0, "yc": 0, "mvp": 0}
+        ],
+        "trophies": "-"
     },
     {
         "n": 69,
@@ -128,8 +139,9 @@
         "name": "",
         "est": 2022,
         "seasons":[
-            {"id": "jdm43", "gp": 7, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 1}
-        ]
+            {"id": "JDM43", "gp": 8, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 1}
+        ],
+        "trophies": "-"
     },
     {
         "n": 77,
@@ -139,8 +151,9 @@
         "name": "Mohamed",
         "est": 2022,
         "seasons":[
-            {"id": "jdm43", "gp": 1, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
-        ]
+            {"id": "JDM43", "gp": 1, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
+        ],
+        "trophies": "-"
     },
     {
         "n": 99,
@@ -150,7 +163,8 @@
         "name": "Francisco",
         "est": 2021,
         "seasons":[
-            {"id": "jdm43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
-        ]
+            {"id": "JDM43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
+        ],
+        "trophies": "-"
     }
 ]

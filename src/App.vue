@@ -1,8 +1,5 @@
 <template>
-  <KeepAlive>
     <component :is="renderedComponent" @renderingComponent="renderComponent" @renderingPlayer="renderPlayer" :player=renderedPlayer />
-  </KeepAlive>
-  
 </template>
 
 <script setup>

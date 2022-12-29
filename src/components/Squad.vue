@@ -37,10 +37,10 @@ const squad = [
 ];
 
 const positionName = [
-    "Portero",
-    "Defensa",
-    "Mediocentro",
-    "Delantero"
+    "Porteros",
+    "Defensas",
+    "Mediocentros",
+    "Delanteros"
 ]
 
 const emits = defineEmits(["renderingComponent", "renderingPlayer"]);
@@ -75,7 +75,7 @@ const renderPlayer = (obj) => {
 }
 
 .player{
-    @apply w-full md:w-80 h-16 bg-[#f6f6f6] rounded-xl flex shrink-0 cursor-pointer hover:drop-shadow-2xl duration-300 hover:bg-[#aeaeae]
+    @apply w-full md:w-80 h-16 bg-[#f6f6f6] flex shrink-0 cursor-pointer hover:drop-shadow-2xl duration-300 hover:bg-[#aeaeae]
 }
 
 .number{

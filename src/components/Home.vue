@@ -31,7 +31,7 @@
             <h1 @click="render(Squad)">
                 Plantilla
             </h1>
-            <h1 @click="render(Ranking)" class="line-through text-[#646464]">
+            <h1 @click="render(Ranking)">
                 Estadísticas
             </h1>
 
@@ -47,6 +47,8 @@ import Tables from './Tables.vue';
 import Matches from './Matches.vue';
 import Squad from './Squad.vue';
 import Ranking from './Ranking.vue';
+
+//
 
 const emits = defineEmits(["renderingComponent"]);
 

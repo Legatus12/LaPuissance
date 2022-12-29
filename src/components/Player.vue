@@ -12,7 +12,7 @@
                     <br><br><br><br><br><br><br><br>
                     <h3 class="font-black">{{ player.value.position }}</h3>
                 </div>
-                <img src="../assets/img/vector.png" class="absolute w-64 md:w-96">
+                <img :src=player.value.img class="absolute w-64 md:w-96">
             </div>
             <div class="stats">
                 <div class="season-selector">
@@ -74,16 +74,18 @@ import Squad from './Squad.vue';
 const selectedSeason = ref("JDM43");
 const loadedSeason = ref({id: "", gp: 0, g: 0, a: 0, rc: 0, yc: 0, mvp: 0});
 
+const img = ref("")
+
 const props = defineProps({
     player: Object
 })
 
 onMounted(() => {
-    loadedSeason.value = props.player.value.seasons.find(x => x.id == selectedSeason.value)
+    loadedSeason.value = props.player.value.seasons.find(x => x.id == selectedSeason.value);
 })
 
 watch(selectedSeason, nv => {
-    loadedSeason.value = props.player.value.seasons.find(x => x.id == nv)
+    loadedSeason.value = props.player.value.seasons.find(x => x.id == nv);
 })
 
 const emits = defineEmits(["renderingComponent"]);

@@ -9,7 +9,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 7, "g": 0, "a": 2, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 4,
@@ -21,7 +22,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 8, "g": 14, "a": 5, "rc": 0, "yc": 2, "mvp": 3}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 5,
@@ -33,7 +35,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 8, "g": 2, "a": 0, "rc": 0, "yc": 1, "mvp": 1}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 6,
@@ -45,7 +48,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 5, "g": 0, "a": 1, "rc": 0, "yc": 1, "mvp": 1}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 9,
@@ -57,7 +61,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 10,
@@ -69,7 +74,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 4, "g": 6, "a": 0, "rc": 0, "yc": 1, "mvp": 0}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 11,
@@ -81,7 +87,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 8, "g": 3, "a": 1, "rc": 0, "yc": 0, "mvp": 1}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 12,
@@ -91,9 +98,11 @@
         "name": "Pablo Lantigua",
         "est": 2021,
         "seasons":[
-            {"id": "JDM43", "gp": 8, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0}
+            {"id": "JDM43", "gp": 8, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0},
+            {"id": "JDM44", "gp": 18, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 14,
@@ -105,7 +114,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 8, "g": 7, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 17,
@@ -117,7 +127,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 7, "g": 4, "a": 4, "rc": 0, "yc": 0, "mvp": 0}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 19,
@@ -129,7 +140,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 8, "g": 6, "a": 3, "rc": 0, "yc": 0, "mvp": 0}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 69,
@@ -141,7 +153,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 8, "g": 1, "a": 0, "rc": 0, "yc": 0, "mvp": 1}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 77,
@@ -153,7 +166,8 @@
         "seasons":[
             {"id": "JDM43", "gp": 1, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     },
     {
         "n": 99,
@@ -165,6 +179,7 @@
         "seasons":[
             {"id": "JDM43", "gp": 0, "g": 0, "a": 0, "rc": 0, "yc": 0, "mvp": 0, "cg": 0}
         ],
-        "trophies": "-"
+        "trophies": "-",
+        "img": "/src/assets/img/vector.png"
     }
 ]

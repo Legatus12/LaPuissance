@@ -27,13 +27,13 @@
 import Header from './Header.vue';
 import Home from './Home.vue';
 
-import array from '../local/players.json';
+import players from '../local/players.json';
 
 const squad = [
-    Object.values(array).filter(x => x.pos == "gk"),
-    Object.values(array).filter(x => x.pos == "df"),
-    Object.values(array).filter(x => x.pos == "mf"),
-    Object.values(array).filter(x => x.pos == "st"),
+    Object.values(players).filter(x => x.pos == "gk"),
+    Object.values(players).filter(x => x.pos == "df"),
+    Object.values(players).filter(x => x.pos == "mf"),
+    Object.values(players).filter(x => x.pos == "st"),
 ];
 
 const positionName = [

@@ -12,6 +12,8 @@
 import Header from './Header.vue';
 import Home from './Home.vue';
 
+//
+
 const emits = defineEmits(["renderingComponent"]);
 
 const goBack = () =>{

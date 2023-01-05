@@ -98,8 +98,7 @@
         "name": "Pablo Lantigua",
         "est": 2021,
         "seasons":[
-            {"id": "JDM43", "gp": 8, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0},
-            {"id": "JDM44", "gp": 18, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0}
+            {"id": "JDM43", "gp": 8, "g": 1, "a": 4, "rc": 0, "yc": 1, "mvp": 0}
         ],
         "trophies": "-",
         "img": "/assets/vector.png"

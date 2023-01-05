@@ -1,25 +1,19 @@
 <template>
     <div class="component">
         <Header :title="'Clasificación'" @back="goBack()" />
-        <div class="select">
-            <h1>Competición - </h1>
-            <select>
-                <option>JDM43</option>
-            </select>
-        </div>
         <div class="table">
             <table class="text-center w-full">
                 <thead class="italic font-black">
                     <th></th>
                     <th class="text-left">EQUIPO</th>
-                    <th>PTS</th>
-                    <th>PJ</th>
-                    <th class="detail">PG</th>
-                    <th class="detail">PE</th>
-                    <th class="detail">PP</th>
-                    <th class="detail">GF</th>
-                    <th class="detail">GC</th>
-                    <th>DG</th>
+                    <th><abbr title="PUNTOS">PTS</abbr></th>
+                    <th><abbr title="PARTIDOS JUGADOS">PJ</abbr></th>
+                    <th class="detail"><abbr title="PARTIDOS GANADOS">PG</abbr></th>
+                    <th class="detail"><abbr title="PARTIDOS EMPATADOS">PE</abbr></th>
+                    <th class="detail"><abbr title="PARTIDOS PERDIDOS">PP</abbr></th>
+                    <th class="detail"><abbr title="GOLES A FAVOR">GF</abbr></th>
+                    <th class="detail"><abbr title="GOLES EN CONTRA">GC</abbr></th>
+                    <th><abbr title="DIFERENCIA DE GOLES">DG</abbr></th>
                 </thead>
                 <tbody class="font-thin">
                     <tr v-for="(team, index) in teams">
@@ -90,7 +84,6 @@ const getTables = async () => {
     } catch (error) {
         console.log(error);
     }
-    console.log(teams.value)
 }
 
 onMounted(() => getTables());
@@ -106,12 +99,8 @@ const goBack = () =>{
 
 <style scoped>
 
-.select{
-    @apply h-16 flex items-center bg-[#f6f6f6] text-[#232323] p-4 md:p-8 md:text-xl
-}
-
 .table{
-    @apply w-full h-full bg-gradient-to-b from-[#232323] to-[#373737] flex justify-center md:p-12 md:text-xl overflow-y-auto
+    @apply w-full h-full bg-gradient-to-b from-[#232323] to-[#373737] flex justify-center md:text-xl overflow-y-auto
 }
 
 .lp{
@@ -123,8 +112,11 @@ const goBack = () =>{
 }
 
 th, td{
-    padding: 0.5rem;
-    border-bottom: 2px solid #646464;
+    @apply md:p-4 border-solid border-b-2 border-[#646464]
+}
+
+thead{
+    @apply bg-[#f6f6f6] text-[#232323]
 }
 
 </style>

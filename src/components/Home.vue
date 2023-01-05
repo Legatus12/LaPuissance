@@ -9,27 +9,25 @@
 
         <div class="menu">
 
-            <h1 @click="render(Club)" class="line-through text-[#646464]">
+
+            <p>EQUIPO</p>
+
+            <h1 class="line-through text-[#646464]">
                 Club
+            </h1>
+            <h1 @click="render(Squad)">
+                Plantilla
             </h1>
 
             <br>
 
-            <p>TEMPORADA</p>
+            <p>JDM 43</p>
 
             <h1 @click="render(Tables)">
                 Clasificación
             </h1>
-            <h1 @click="render(Matches)" class="line-through text-[#646464]">
-                Partidos
-            </h1>
-
-            <br>
-
-            <p>EQUIPO</p>
-
-            <h1 @click="render(Squad)">
-                Plantilla
+            <h1 @click="render(Matches)">
+                Resultados
             </h1>
             <h1 @click="render(Ranking)">
                 Estadísticas

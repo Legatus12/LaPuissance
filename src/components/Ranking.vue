@@ -1,28 +1,21 @@
 <template>
     <div class="component">
         <Header :title="'Estadísticas'" @back="goBack()" />
-        <div class="select">
-            <h1>Competición - </h1>
-            <select v-model="selectedSeason">
-                <option>JDM43</option>
-            </select>
-        </div>
         <div class="main">
             <div class="ranking">
                 <h1 class="title">TOP 3 GOLEADORES</h1>
                 <div class="player-container">
                     <div v-for="player in topGoals" class="player">
-                        <img :src=player.img class="h-32">
                         <div class="info">
-                            <div>
-                                <span class="font-black text-[#f1121f]">{{ player.n }}</span> |
-                                <span class="font-black">{{ player.nickname }}</span>
+                            <span class="text-[#f1121f]">{{ player.n }}</span><span class="font-normal">&nbsp;|&nbsp;</span><span class="nickname">{{ player.nickname }}</span>
+                        </div>
+                        <br>
+                        <div class="w-full flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="font-bold">{{ player.g }}</div>
+                                <img src="../assets/img/football.png">
                             </div>
-                            <div>
-                                <div><span class="font-black">{{ player.g }}</span> goles</div>
-                                <div>en {{ player.gp }} partidos</div>
-                                <div class="text-[#aeaeae] italic">{{ (player.g / player.gp).toFixed(2) }} G/PJ</div>
-                            </div>
+                            <div class="detail"> {{ (player.g / player.gp).toFixed(2) }} G/P </div>
                         </div>
                     </div>
                 </div>
@@ -31,17 +24,16 @@
                 <h1 class="title">TOP 3 ASISTENTES</h1>
                 <div class="player-container">
                     <div v-for="player in topAssists" class="player">
-                        <img :src=player.img class="h-32">
                         <div class="info">
-                            <div>
-                                <span class="font-black text-[#f1121f]">{{ player.n }}</span> |
-                                <span class="font-black">{{ player.nickname }}</span>
+                            <span class="text-[#f1121f]">{{ player.n }}</span><span class="font-normal"> | </span><span class="nickname">{{ player.nickname }}</span>
+                        </div>
+                        <br>
+                        <div class="w-full flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="font-bold">{{ player.a }}</div>
+                                <img src="../assets/img/assist.png">
                             </div>
-                            <div>
-                                <div><span class="font-black">{{ player.a }}</span> asistencias</div>
-                                <div>en {{ player.gp }} partidos</div>
-                                <div class="text-[#aeaeae] italic">{{ (player.a / player.gp).toFixed(2) }} G/PJ</div>
-                            </div>
+                            <div class="detail"> {{ (player.a / player.gp).toFixed(2) }} A/P </div>
                         </div>
                     </div>
                 </div>
@@ -50,16 +42,17 @@
                 <h1 class="title">TOP 3 AMONESTADOS</h1>
                 <div class="player-container">
                     <div v-for="player in topCards" class="player">
-                        <img :src=player.img class="h-32">
                         <div class="info">
-                            <div>
-                                <span class="font-black text-[#f1121f]">{{ player.n }}</span> |
-                                <span class="font-black">{{ player.nickname }}</span>
-                            </div>
-                            <div>
-                                <div><span class="font-black">{{ player.yc }}</span> tarjetas amarillas y</div>
-                                <div><span class="font-black">{{ player.rc }}</span> tarjetas rojas</div>
-                                <div>en {{ player.gp }} partidos</div>
+                            <span class="text-[#f1121f]">{{ player.n }}</span><span class="font-normal"> | </span><span class="nickname">{{ player.nickname }}</span>
+                        </div>
+                        <br>
+                        <div class="w-full flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="font-bold">{{ player.yc }}</div>
+                                <img src="../assets/img/yellowCard.png">
+                                &nbsp;
+                                <div v-if="player.rc != 0" class="font-bold">{{ player.rc }}</div>
+                                <img v-if="player.rc != 0" src="../assets/img/redCard.png">
                             </div>
                         </div>
                     </div>
@@ -72,7 +65,7 @@
 
 <script setup>
 
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted } from 'vue';
 
 import Header from './Header.vue';
 import Home from './Home.vue';
@@ -83,22 +76,16 @@ import moreCards from '../store/moreCards.mjs';
 
 //
 
-const selectedSeason = ref("JDM43");
+const season = "JDM43";
 
 const topGoals = ref([{nickname: ""}]);
 const topAssists = ref([{nickname: ""}]);
 const topCards = ref([{nickname: ""}]);
 
 onMounted(() => {
-    topGoals.value = moreGoals(selectedSeason.value);
-    topAssists.value = moreAssists(selectedSeason.value);
-    topCards.value = moreCards(selectedSeason.value);
-})
-
-watch(selectedSeason, nv => {
-    topGoals.value = moreGoals(nv);
-    topAssists.value = moreAssists(nv);
-    topCards.value = moreCards(nv);
+    topGoals.value = moreGoals(season);
+    topAssists.value = moreAssists(season);
+    topCards.value = moreCards(season);
 })
 
 const emits = defineEmits(["renderingComponent"]);
@@ -117,15 +104,15 @@ const goBack = () =>{
 }
 
 .main{
-    @apply bg-gradient-to-b from-[#232323] to-[#373737] w-full h-full flex flex-col lg:flex-row p-12 gap-12 overflow-y-auto
+    @apply bg-gradient-to-b from-[#232323] to-[#373737] w-full h-full flex flex-col xl:flex-row p-12 gap-12 overflow-y-auto
 }
 
 .ranking{
-    @apply basis-1/3 md:h-full bg-[#646464] flex flex-col
+    @apply basis-1/3 md:h-full flex flex-col
 }
 
 .title{
-    @apply font-black p-4 text-3xl
+    @apply font-black text-3xl border-solid border-b-2 border-[#888888]
 }
 
 .player-container{
@@ -133,11 +120,15 @@ const goBack = () =>{
 }
 
 .player{
-    @apply basis-1/3 bg-[#f6f6f6] flex items-end p-4
+    @apply bg-[#f6f6f6] text-[#232323] flex flex-col p-4 text-2xl
 }
 
 .info{
-    @apply w-full h-full text-[#232323] flex flex-col justify-between text-end text-lg
+    @apply font-black text-2xl md:text-4xl
+}
+
+.detail{
+    @apply text-xl md:text-xl text-[#646464]
 }
 
 </style>

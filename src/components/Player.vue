@@ -12,7 +12,7 @@
                     <br><br><br><br><br><br><br><br>
                     <h3 class="font-black">{{ player.value.position }}</h3>
                 </div>
-                <img :src=player.value.img class="absolute w-64 md:w-96">
+                <img src="../assets/img/vector.png" class="absolute w-64 md:w-96">
             </div>
             <div class="stats">
                 <div class="season-selector">

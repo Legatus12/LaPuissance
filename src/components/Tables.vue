@@ -1,7 +1,8 @@
 <template>
     <div class="component">
         <Header :title="'Clasificación'" @back="goBack()" />
-        <div class="table">
+        <Loading v-if="loading == true" />
+        <div v-else class="table">
             <table class="text-center w-full">
                 <thead class="italic font-black">
                     <th></th>
@@ -65,11 +66,14 @@ import { ref, onMounted } from 'vue';
 
 import Header from './Header.vue';
 import Home from './Home.vue';
+import Loading from './Loading.vue';
 
 import Papa from 'papaparse';
 import sortTeams from '../store/sortTeams.mjs';
 
 const teams = ref([]);
+
+const loading = ref(true);
 
 const getTables = async () => {
     try {
@@ -79,6 +83,7 @@ const getTables = async () => {
             header: true,
             complete: function(result) {
                 teams.value = result.data.filter(x => x.Nombre_grupo == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h").sort(sortTeams);
+                loading.value = false;
             }
         });
     } catch (error) {

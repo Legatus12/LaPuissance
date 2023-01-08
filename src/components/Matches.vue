@@ -1,7 +1,8 @@
 <template>
     <div class="component">
         <Header :title="'Resultados'" @back="goBack()" />
-        <div class="main">
+        <Loading v-if="loading == true" />
+        <div v-else class="main">
             <div class="next">
                 <h1 class="title">Próximo partido</h1>
                 <div class="h-full flex flex-col items-center justify-center gap-6 md:gap-12 p-6 md:p-12">
@@ -47,6 +48,7 @@ import { ref, onMounted } from 'vue';
 
 import Header from './Header.vue';
 import Home from './Home.vue';
+import Loading from './Loading.vue';
 
 import Papa from 'papaparse';
 import sortMatches from '../store/sortMatches.mjs';
@@ -57,6 +59,8 @@ const matches = ref([]);
 const nextMatch = ref({});
 const week = ref(0);
 
+const loading = ref(true);
+
 const getMatches = async () => {
     try {
         const response = await fetch('assets/matches.csv'); /* dev -> src/local/matches.csv */ /* prod -> assets/matches.csv */
@@ -66,10 +70,13 @@ const getMatches = async () => {
             complete: function(result) {
                 matches.value = result.data
                                     .filter(x => x.Nombre_grupo == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && (x.Equipo_local == "La Puissance" || x.Equipo_visitante == "La Puissance") && x.Estado == "F")
-                                    .sort(sortMatches);
+                                    .sort(sortMatches)
+                                    .reverse();
                 nextMatch.value = result.data
                                     .filter(x => x.Nombre_grupo == "JDM RET DOM TAR F7 SEN MAS Adelf D9 15-17h" && (x.Equipo_local == "La Puissance" || x.Equipo_visitante == "La Puissance") && x.Estado == "R")
                                     .sort(sortMatches)[0];
+
+                loading.value = false;
             }
         });
     } catch (error) {

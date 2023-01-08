@@ -12,7 +12,7 @@
 
             <p>EQUIPO</p>
 
-            <h1 class="line-through text-[#646464]">
+            <h1 @click="render(Club)">
                 Club
             </h1>
             <h1 @click="render(Squad)">

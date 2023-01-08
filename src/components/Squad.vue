@@ -87,7 +87,7 @@ const renderPlayer = (obj) => {
 }
 
 .nickname{
-    @apply text-xl font-bold text-xl font-bold
+    @apply text-xl font-bold
 }
 
 </style>
